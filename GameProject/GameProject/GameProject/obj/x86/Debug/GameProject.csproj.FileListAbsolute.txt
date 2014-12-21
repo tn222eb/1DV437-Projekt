@@ -1,0 +1,45 @@
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkLeft.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkRight.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkLeft.png
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkRight.png
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Tile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
