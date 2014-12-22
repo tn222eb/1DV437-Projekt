@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb</Output>
       <Time>2014-12-21T02:08:01.2632174+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb</Output>
       <Time>2014-12-21T02:07:40.029284+01:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb</Output>
       <Time>2014-12-21T01:55:57.6044174+01:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb</Output>
       <Time>2014-12-21T01:55:36.1458724+01:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb</Output>
       <Time>2014-12-17T00:58:26.4558371+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -53,10 +53,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProjectContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProjectContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProjectContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProjectContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

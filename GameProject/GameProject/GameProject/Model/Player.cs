@@ -12,14 +12,23 @@ namespace GameProject.Model
         private Vector2 m_velocity;
         private Vector2 m_gravityAcceleration;
 
+        private int m_numberOfLives = 1;
+
         public Player()
         {
-            m_gravityAcceleration = new Vector2(0, 3f);
+            m_gravityAcceleration = new Vector2(0, 4f);
 
+            Size = new Vector2(0.9f, 0.9f);
             CanJump = true;
         }
 
         public Boolean CanJump
+        {
+            get;
+            set;
+        }
+
+        public Vector2 Size
         {
             get;
             set;
@@ -41,12 +50,6 @@ namespace GameProject.Model
         {
             m_modelCenterPosition += Velocity * totalElapsedSeconds;
             m_velocity += m_gravityAcceleration * totalElapsedSeconds;
-
-            if (m_modelCenterPosition.Y >= Level.LEVEL_HEIGHT - 1)
-            {
-                CanJump = true;
-                m_velocity.Y = 0f;
-            }
         }
 
         /// <summary>
@@ -54,7 +57,7 @@ namespace GameProject.Model
         /// </summary>
         public void MoveLeft()
         {
-            m_velocity.X = -5f;
+            m_velocity.X = -3.5f;
         }
 
         /// <summary>
@@ -62,7 +65,7 @@ namespace GameProject.Model
         /// </summary>
         public void MoveRight()
         {
-            m_velocity.X = 5f;
+            m_velocity.X = 3.5f;
         }
 
         /// <summary>
@@ -70,8 +73,24 @@ namespace GameProject.Model
         /// </summary>
         public void DoJump() 
         {
-            m_velocity.Y = -3f;
+            m_velocity.Y = -4f;
             CanJump = false;
+        }
+
+        /// <summary>
+        /// Takes away life from player
+        /// </summary>
+        public void RemoveLife()
+        {
+            m_numberOfLives--;
+        }
+
+        /// <summary>
+        /// Check if player got life left
+        /// </summary>
+        public int GetRemainingLives()
+        {
+            return m_numberOfLives;
         }
     }
 }

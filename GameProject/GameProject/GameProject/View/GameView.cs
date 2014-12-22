@@ -20,7 +20,7 @@ namespace GameProject.View
         private float m_elapsedTime;
         private float m_delayTime = 60f;
         private int m_frames = 0;
-     
+
         private Texture2D m_playerRightWalkTexture;
         private Texture2D m_playerLeftWalkTexture;
         private Texture2D m_playerTexture;
@@ -92,7 +92,7 @@ namespace GameProject.View
             }
         }
 
-        public void DrawLevel(Viewport viewport, Camera camera, Level level, Vector2 playerPosition)
+        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = camera.GetScale();
@@ -113,9 +113,9 @@ namespace GameProject.View
             m_spriteBatch.End();
         }
 
-        private void DrawTile(float x, float y, Tile tile, float scale)
+        private void DrawTile(float x, float y, GameProject.Model.Level.Tile tile, float scale)
         {
-            if (tile.isBlocked()) 
+            if (tile == Level.Tile.BLOCKED)
             {
                 m_tileTexture = m_groundTexture;
             }

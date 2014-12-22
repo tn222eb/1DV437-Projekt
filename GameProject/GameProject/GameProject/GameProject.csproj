@@ -107,11 +107,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Collider.cs" />
+    <Compile Include="Model\CollisionDetails.cs" />
+    <Compile Include="Model\FloatRectangle.cs" />
     <Compile Include="Model\GameModel.cs" />
     <Compile Include="Model\ImportLevel.cs" />
     <Compile Include="Model\Level.cs" />
     <Compile Include="Model\Player.cs" />
-    <Compile Include="Model\Tile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controller\MasterController.cs" />

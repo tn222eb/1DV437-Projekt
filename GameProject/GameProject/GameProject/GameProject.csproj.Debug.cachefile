@@ -3,8 +3,12 @@ Content\PlayerRightWalkAnimation.xnb
 Content\GroundTile.xnb
 Content\EmptyTile.xnb
 Content\Jump.xnb
+Content\Cigarette.xnb
+Content\Cigaret.xnb
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
 Content\GroundTile.png
 Content\Jump.wav
 Content\EmptyTile.png
+Content\Cigarette.png
+Content\Cigaret.png

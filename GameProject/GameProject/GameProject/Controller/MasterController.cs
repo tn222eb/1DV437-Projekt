@@ -84,15 +84,20 @@ namespace GameProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            float elapsedTimeSeconds = (float) gameTime.ElapsedGameTime.TotalSeconds;
+            float elapsedTimeSeconds = (float)gameTime.ElapsedGameTime.TotalSeconds;
             float elapsedTimeMilliSeconds = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            if (m_gameView.DidPlayerPressToQuit())
+            bool playerQuit = m_gameView.DidPlayerPressToQuit();
+            bool playerJump = m_gameView.DidPlayerPressToJump();
+            bool playerGoesRight = m_gameView.DidPlayerPressGoRight();
+            bool playerGoesLeft = m_gameView.DidPlayerPressGoLeft();
+
+            if (playerQuit)
             {
                 this.Exit();
             }
 
-            if (m_gameView.DidPlayerPressToJump())
+            if (playerJump)
             {
                 if (m_gameModel.CanPlayerJump())
                 {
@@ -101,19 +106,19 @@ namespace GameProject
                 }
             }
 
-            if (m_gameView.DidPlayerPressGoRight())
+            if (playerGoesRight)
             {
                 m_gameModel.MoveRight();
                 m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.RIGHT);
             }
 
-            else if (m_gameView.DidPlayerPressGoLeft())
+            else if (playerGoesLeft)
             {
                 m_gameModel.MoveLeft();
                 m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.LEFT);
             }
 
-            else 
+            else
             {
                 m_gameModel.StandStill();
                 m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.STAND);
@@ -136,7 +141,7 @@ namespace GameProject
                 GraphicsDevice.Viewport,
                 new Vector2(Level.LEVEL_WIDTH, Level.LEVEL_HEIGHT));
 
-            m_gameView.DrawLevel(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position);
+            m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position);
 
             base.Draw(gameTime);
         }

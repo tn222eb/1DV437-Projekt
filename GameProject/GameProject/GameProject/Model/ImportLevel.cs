@@ -13,7 +13,6 @@ namespace GameProject.Model
         /// Read all string from text file to make level
         /// </summary>
         /// <param name="levelIndex"></param>
-        /// <returns>levelString</returns>
         public static string ReadLevel(int levelIndex)
         {
             bool levelStringFixed = false;
