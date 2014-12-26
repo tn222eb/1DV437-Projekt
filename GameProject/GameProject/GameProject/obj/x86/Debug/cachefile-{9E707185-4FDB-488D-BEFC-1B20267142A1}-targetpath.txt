@@ -3,8 +3,12 @@ Content\PlayerRightWalkAnimation.xnb
 Content\GroundTile.xnb
 Content\EmptyTile.xnb
 Content\Jump.xnb
+Content\SpriteFont.xnb
+Content\SpriteFont2.xnb
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
 Content\GroundTile.png
 Content\Jump.wav
 Content\EmptyTile.png
+Content\SpriteFont.spritefont
+Content\SpriteFont2.spritefont

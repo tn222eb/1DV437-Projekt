@@ -1,4 +1,5 @@
-﻿using System;
+﻿// https://code.google.com/p/1dv437arkanoid/source/browse/trunk/Collisions/Collisions2/Model/Model.cs
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

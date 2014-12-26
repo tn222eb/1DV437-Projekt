@@ -10,7 +10,7 @@ namespace GameProject
         /// </summary>
         static void Main(string[] args)
         {
-            using (MasterController game = new MasterController())
+            using (GameController game = new GameController())
             {
                 game.Run();
             }

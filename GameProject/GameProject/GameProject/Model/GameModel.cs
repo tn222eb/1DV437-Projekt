@@ -8,15 +8,37 @@ namespace GameProject.Model
 {
     class GameModel
     {
+        public enum GameState 
+        {
+            PLAY = 0,
+            MAIN_MENU,
+            GAME_OVER,
+            LEVEL_FINISHED,
+            PAUSE
+        }
+
         Player m_player;
         Level m_level;
+        GameState m_gameState = GameState.MAIN_MENU;
+
         bool m_hasCollidedWithGround = false;
 
-        public GameModel(string levelString)
+        public GameModel()
         {
-            m_level = new Level(levelString);
+            m_level = new Level();
             m_player = new Player();
-            m_player.Position = m_level.PlayerStartingPosition;
+
+            StartGame();
+        }
+
+        public GameState GetGameState
+        {
+            get { return m_gameState; }
+        }
+
+        public GameState SetGameState 
+        {
+            set { m_gameState = value; }
         }
 
         public Level GetLevel
@@ -39,7 +61,21 @@ namespace GameProject.Model
             m_player.MoveRight();
         }
 
+        public void StartGame() 
+        {
+            m_player.Position = m_level.PlayerStartingPosition;
+        }
+
         public void Update(float totalElapsedSeconds)
+        {
+            UpdatePlayer(totalElapsedSeconds);
+
+            CheckIfInHole();
+            CheckIfDead(totalElapsedSeconds);
+            CheckIfLevelFinished(totalElapsedSeconds);
+        }
+
+        private void UpdatePlayer(float totalElapsedSeconds)
         {
             Vector2 oldPosition = m_player.Position;
             m_player.Update(totalElapsedSeconds);
@@ -48,18 +84,14 @@ namespace GameProject.Model
             m_hasCollidedWithGround = false;
             Vector2 velocity = m_player.Velocity;
 
-            if (didCollide(newPosition, m_player.Size))
+            if (CollisionHandler.didCollide(newPosition, m_player.Size, m_level))
             {
-                CollisionDetails details = getCollisionDetails(oldPosition, newPosition, m_player.Size, velocity);
+                CollisionDetails details = CollisionHandler.getCollisionDetails(oldPosition, newPosition, m_player.Size, velocity, m_level);
                 m_hasCollidedWithGround = details.m_hasCollidedWithGround;
 
                 m_player.Position = details.m_positionAfterCollision;
                 m_player.Velocity = details.m_speedAfterCollision;
             }
-
-            CheckIfInHole(totalElapsedSeconds);
-            CheckIfDead();
-            IsLevelFinished();
         }
 
         public void StandStill()
@@ -77,25 +109,29 @@ namespace GameProject.Model
             return m_hasCollidedWithGround;
         }
 
-        private void IsLevelFinished()
+        private void CheckIfLevelFinished(float totalElapsedSeconds)
         {
-            if (m_player.Position.X > Level.LEVEL_WIDTH)
+            if (m_level.IsAtLevelFinish(m_player.Position, m_player.Size))
             {
-                m_player = new Player();
-                m_player.Position = m_level.PlayerStartingPosition;
+                m_gameState = GameState.LEVEL_FINISHED;
             }
         }
 
-        private void CheckIfDead()
+        private void CheckIfDead(float totalElapsedSeconds)
         {
             if (m_player.GetRemainingLives() <= 0)
             {
-                m_player = new Player();
-                m_player.Position = m_level.PlayerStartingPosition;
+                m_gameState = GameState.GAME_OVER;
             }
         }
 
-        private void CheckIfInHole(float a_elapsedTime)
+        public void RestartGame() 
+        {
+            m_player = new Player();
+            StartGame();
+        }
+
+        private void CheckIfInHole()
         {
             if (m_level.IsInHole(m_player.Position, m_player.Size))
             {
@@ -103,88 +139,12 @@ namespace GameProject.Model
             }
         }
 
-        private bool didCollide(Vector2 a_centerBottom, Vector2 a_size)
+        public void LoadNextLevel()
         {
-            FloatRectangle occupiedArea = FloatRectangle.createFromCenterBottom(a_centerBottom, a_size);
-            if (m_level.IsCollidingAt(occupiedArea))
-            {
-                return true;
-            }
-            return false;
-        }
+            m_level.CurrentLevel++;
+            m_level.LoadLevel();
 
-        private CollisionDetails getCollisionDetails(Vector2 a_oldPos, Vector2 a_newPosition, Vector2 a_size, Vector2 a_velocity)
-        {
-            CollisionDetails ret = new CollisionDetails(a_oldPos, a_velocity);
-
-            Vector2 slidingXPosition = new Vector2(a_newPosition.X, a_oldPos.Y); //Y movement ignored
-            Vector2 slidingYPosition = new Vector2(a_oldPos.X, a_newPosition.Y); //X movement ignored
-
-            if (didCollide(slidingXPosition, a_size) == false)
-            {
-                return doOnlyXMovement(ref a_velocity, ret, ref slidingXPosition);
-            }
-            else if (didCollide(slidingYPosition, a_size) == false)
-            {
-
-                return doOnlyYMovement(ref a_velocity, ret, ref slidingYPosition);
-            }
-            else
-            {
-                return doStandStill(ret, a_velocity);
-            }
-
-        }
-
-        private static CollisionDetails doStandStill(CollisionDetails ret, Vector2 a_velocity)
-        {
-            if (a_velocity.Y > 0)
-            {
-                ret.m_hasCollidedWithGround = true;
-            }
-
-            ret.m_speedAfterCollision = new Vector2(0, 0);
-
-            return ret;
-        }
-
-        private static CollisionDetails doOnlyYMovement(ref Vector2 a_velocity, CollisionDetails ret, ref Vector2 slidingYPosition)
-        {
-            a_velocity.X *= -0.5f; //bounce from wall
-            ret.m_speedAfterCollision = a_velocity;
-            ret.m_positionAfterCollision = slidingYPosition;
-            return ret;
-        }
-
-        private static CollisionDetails doOnlyXMovement(ref Vector2 a_velocity, CollisionDetails ret, ref Vector2 slidingXPosition)
-        {
-            ret.m_positionAfterCollision = slidingXPosition;
-            //did we slide on ground?
-            if (a_velocity.Y > 0)
-            {
-                ret.m_hasCollidedWithGround = true;
-            }
-
-            ret.m_speedAfterCollision = doSetSpeedOnVerticalCollision(a_velocity);
-            return ret;
-        }
-
-        private static Vector2 doSetSpeedOnVerticalCollision(Vector2 a_velocity)
-        {
-            //did we collide with ground?
-            if (a_velocity.Y > 0)
-            {
-                a_velocity.Y = 0; //no bounce
-            }
-            else
-            {
-                //collide with roof
-                a_velocity.Y *= -1.0f;
-            }
-
-            a_velocity.X *= 0.10f;
-
-            return a_velocity;
+            StartGame();
         }
     }
 }

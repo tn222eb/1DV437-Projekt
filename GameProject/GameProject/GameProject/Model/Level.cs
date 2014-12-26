@@ -11,20 +11,31 @@ namespace GameProject.Model
     {
         public const int LEVEL_WIDTH = 22;
         public const int LEVEL_HEIGHT = 7;
+        private const int LEVEL_ONE = 1;
+        private const int LEVEL_TWO = 2;
 
         public Tile[,] m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
 
         private char m_blockedChar = 'x';
         private char m_playerStartChar = 's';
         private char m_holeChar = 'h';
-        private string m_levelString;
+        private char m_playerFinishChar = 'f';
+
+        private Levels m_currentLevel;
 
         public enum Tile
         {
             EMPTY = 0,
             BLOCKED,
-            HOLE
+            HOLE,
+            FINISH
         };
+
+        public enum Levels
+        {
+            ONE = 0,
+            TWO = 1
+        }
 
         public Vector2 PlayerStartingPosition
         {
@@ -32,14 +43,37 @@ namespace GameProject.Model
             set;
         }
 
-        public Level(string levelString)
+        public Levels CurrentLevel
         {
-            m_levelString = levelString;
-
-            GenerateLevel();
+            get { return m_currentLevel; }
+            set { m_currentLevel = value; }
         }
 
-        public void GenerateLevel()
+        internal void LoadLevel()
+        {
+            string levelString;
+
+            switch (m_currentLevel)
+            {
+                case Levels.ONE:
+                    levelString = ImportLevel.ReadLevel(LEVEL_ONE);
+                    GenerateLevel(levelString);
+                    break;
+
+                case Levels.TWO:
+                    levelString = ImportLevel.ReadLevel(LEVEL_TWO);
+                    GenerateLevel(levelString);
+                    break;
+            }
+        }
+
+        public Level()
+        {
+            m_currentLevel = Levels.ONE;
+            LoadLevel();
+        }
+
+        public void GenerateLevel(string levelString)
         {
             for (int x = 0; x < LEVEL_WIDTH; x++)
             {
@@ -47,20 +81,25 @@ namespace GameProject.Model
                 {
                     int index = y * LEVEL_WIDTH + x;
 
-                    if (m_levelString[index] == m_blockedChar)
+                    if (levelString[index] == m_blockedChar)
                     {
                         m_tiles[x, y] = Tile.BLOCKED;
                     }
 
-                    else if (m_levelString[index] == m_playerStartChar)
+                    else if (levelString[index] == m_playerStartChar)
                     {
                         PlayerStartingPosition = new Vector2(x + 0.5f, y);
                         m_tiles[x, y] = Tile.EMPTY;
                     }
 
-                    else if (m_levelString[index] == m_holeChar) 
+                    else if (levelString[index] == m_holeChar) 
                     {
                         m_tiles[x, y] = Tile.HOLE;
+                    }
+
+                    else if (levelString[index] == m_playerFinishChar) 
+                    {
+                        m_tiles[x, y] = Tile.FINISH;
                     }
 
                     else
@@ -71,10 +110,10 @@ namespace GameProject.Model
             }
         }
 
-        public bool IsInHole(Vector2 a_position, Vector2 a_size)
+        public bool IsInHole(Vector2 position, Vector2 size)
         {
-            Vector2 topLeft = new Vector2(a_position.X - a_size.X / 2.0f, a_position.Y - a_size.Y);
-            Vector2 bottomRight = new Vector2(a_position.X + a_size.X / 2.0f, a_position.Y);
+            Vector2 topLeft = new Vector2(position.X - size.X / 2.0f, position.Y - size.Y);
+            Vector2 bottomRight = new Vector2(position.X + size.X / 2.0f, position.Y);
 
             for (int x = 0; x < LEVEL_WIDTH; x++)
             {
@@ -82,7 +121,7 @@ namespace GameProject.Model
                 {
                     if (bottomRight.X < (float)x)
                         continue;
-                    if (bottomRight.Y < (float)y)
+                    if (bottomRight.Y < (float)y + 1.0f)
                         continue;
                     if (topLeft.X > (float)x + 1.0f)
                         continue;
@@ -99,9 +138,38 @@ namespace GameProject.Model
             return false;
         }
 
+        public bool IsAtLevelFinish(Vector2 position, Vector2 size)
+        {
+            Vector2 topLeft = new Vector2(position.X - size.X / 2.0f, position.Y - size.Y);
+            Vector2 bottomRight = new Vector2(position.X + size.X / 2.0f, position.Y);
+
+            for (int x = 0; x < LEVEL_WIDTH; x++)
+            {
+                for (int y = 0; y < LEVEL_HEIGHT; y++)
+                {
+                    if (bottomRight.X < (float)x + 1.0f)
+                        continue;
+                    if (bottomRight.Y < (float)y)
+                        continue;
+                    if (topLeft.X > (float)x + 1.0f)
+                        continue;
+                    if (topLeft.Y > (float)y + 1.0f)
+                        continue;
+
+                    if (m_tiles[x, y] == Tile.FINISH)
+                    {
+                        return true;
+                    }
+                }
+            }
+
+            return false;
+        }
+
         public bool IsCollidingAt(FloatRectangle a_rect)
         {
             Vector2 tileSize = new Vector2(1, 1);
+
             for (int x = 0; x < LEVEL_WIDTH; x++)
             {
                 for (int y = 0; y < LEVEL_HEIGHT; y++)
@@ -116,6 +184,7 @@ namespace GameProject.Model
                     }
                 }
             }
+
             return false;
         }
     }

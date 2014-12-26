@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using GameProject.Model;
+using Microsoft.Xna.Framework.Content;
 
 namespace GameProject.View
 {
@@ -18,7 +19,7 @@ namespace GameProject.View
         private Rectangle m_destinationRectangle;
 
         private float m_elapsedTime;
-        private float m_delayTime = 60f;
+        private float m_delayTimer = 60f;
         private int m_frames = 0;
 
         private Texture2D m_playerRightWalkTexture;
@@ -35,17 +36,17 @@ namespace GameProject.View
             STAND
         };
 
-        public GameView(SpriteBatch spriteBatch, GameModel gameModel, Texture2D playerWalkLeftTexture, Texture2D playerWalkRightTexture, Texture2D groundTexture, Texture2D emptyTexture)
+        public GameView(SpriteBatch spriteBatch, GameModel gameModel, ContentManager content)
         {
             this.m_spriteBatch = spriteBatch;
             this.m_gameModel = gameModel;
 
-            this.m_playerLeftWalkTexture = playerWalkLeftTexture;
-            this.m_playerRightWalkTexture = playerWalkRightTexture;
-            this.m_groundTexture = groundTexture;
-            this.m_emptyTexture = emptyTexture;
-
-            this.m_playerTexture = playerWalkRightTexture;
+            // Load textures
+            this.m_playerLeftWalkTexture = content.Load<Texture2D>("PlayerLeftWalkAnimation");
+            this.m_playerRightWalkTexture = content.Load<Texture2D>("PlayerRightWalkAnimation");
+            this.m_groundTexture = content.Load<Texture2D>("GroundTile");
+            this.m_emptyTexture = content.Load<Texture2D>("EmptyTile");
+            this.m_playerTexture = m_playerRightWalkTexture;
         }
 
         /// <summary>
@@ -59,7 +60,7 @@ namespace GameProject.View
             {
                 m_elapsedTime += timeElapsedMilliSeconds;
 
-                if (m_elapsedTime >= m_delayTime)
+                if (m_elapsedTime >= m_delayTimer)
                 {
                     if (m_frames >= 3)
                     {
@@ -92,7 +93,7 @@ namespace GameProject.View
             }
         }
 
-        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition)
+        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = camera.GetScale();
@@ -152,10 +153,19 @@ namespace GameProject.View
             return Keyboard.GetState().IsKeyDown(Keys.Right);
         }
 
-        public bool DidPlayerPressToQuit()
+        public bool DidPlayerPressToPause()
         {
             return Keyboard.GetState().IsKeyDown(Keys.Escape);
         }
 
+        internal bool DidPlayerWantToStartGame(int selected)
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 0;
+        }
+
+        internal bool DidPlayerWantToExitGame(int selected)
+        {
+            return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 1;
+        }
     }
 }

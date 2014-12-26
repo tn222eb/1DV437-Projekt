@@ -16,8 +16,8 @@ namespace GameProject.Model
         public static string ReadLevel(int levelIndex)
         {
             bool levelStringFixed = false;
-            string levelPath = String.Format(@"..\..\..\Level{0}.txt", levelIndex);
-            string fullPath = System.IO.Path.GetFullPath(levelPath);
+            string levelPath = String.Format(@"..\..\..\Levels\Level{0}.txt", levelIndex);
+            string fullPath = Path.GetFullPath(levelPath);
 
             using (StreamReader reader = new StreamReader(fullPath))
             {

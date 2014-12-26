@@ -2,3 +2,4 @@ c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProje
 C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
 C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache

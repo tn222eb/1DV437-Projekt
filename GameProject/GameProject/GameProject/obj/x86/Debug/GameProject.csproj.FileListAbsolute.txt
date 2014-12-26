@@ -59,3 +59,31 @@ C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\Gam
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Instructions.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Instructions.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
