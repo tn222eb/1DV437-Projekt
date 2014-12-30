@@ -12,10 +12,12 @@ namespace GameProject.Model
         public static bool didCollide(Vector2 centerBottom, Vector2 size, Level level)
         {
             FloatRectangle occupiedArea = FloatRectangle.createFromCenterBottom(centerBottom, size);
+
             if (level.IsCollidingAt(occupiedArea))
             {
                 return true;
             }
+
             return false;
         }
 
@@ -30,10 +32,12 @@ namespace GameProject.Model
             {
                 return doOnlyXMovement(ref velocity, ret, ref slidingXPosition);
             }
+
             else if (didCollide(slidingYPosition, size, level) == false)
             {
                 return doOnlyYMovement(ref velocity, ret, ref slidingYPosition);
             }
+
             else
             {
                 return doStandStill(ret, velocity);
@@ -81,6 +85,7 @@ namespace GameProject.Model
             {
                 velocity.Y = 0; //no bounce
             }
+
             else
             {
                 //collide with roof
@@ -90,6 +95,19 @@ namespace GameProject.Model
             velocity.X *= 0.10f;
 
             return velocity;
+        }
+
+        public static bool IsCollidingWithBomb(Player player, Bomb bomb)
+        {
+            Collider colliderOfPlayer = new Collider(player.Position, (player.Size.Y / 2.0f));
+            Collider colliderOfBomb = new Collider(bomb.Position, (bomb.Size.Y / 2.0f));
+
+            if (colliderOfPlayer.DoCollide(colliderOfBomb))
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

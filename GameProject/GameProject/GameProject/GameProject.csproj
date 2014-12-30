@@ -107,6 +107,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\ISoundObserver.cs" />
+    <Compile Include="Model\Bomb.cs" />
+    <Compile Include="Model\Coin.cs" />
     <Compile Include="View\MenuView.cs" />
     <Compile Include="Model\Collider.cs" />
     <Compile Include="Model\CollisionDetails.cs" />
@@ -121,6 +124,7 @@
     <Compile Include="Controller\GameController.cs" />
     <Compile Include="View\Camera.cs" />
     <Compile Include="View\GameView.cs" />
+    <Compile Include="View\SoundView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />

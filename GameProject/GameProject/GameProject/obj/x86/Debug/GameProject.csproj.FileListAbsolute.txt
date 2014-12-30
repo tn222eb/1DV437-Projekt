@@ -87,3 +87,13 @@ C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Co
 C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Bomb.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.mp3
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.png

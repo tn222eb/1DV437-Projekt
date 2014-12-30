@@ -29,11 +29,15 @@ namespace GameProject
 
         int m_optionSelected = 0;
         private SpriteFont m_biggerFont;
+        private List<string> m_gameWonOptionList = new List<string>();
 
         public MenuView(SpriteBatch spriteBatch, GraphicsDeviceManager graphics)   
         {
             m_startOptionList.Add("Play");
             m_startOptionList.Add("Exit");
+
+            m_gameWonOptionList.Add("Play again");
+            m_gameWonOptionList.Add("Exit");
 
             m_continueOptionList.Add("Continue");
             m_continueOptionList.Add("Exit");
@@ -150,6 +154,14 @@ namespace GameProject
             m_spriteBatch.Begin();
             m_spriteBatch.DrawString(font, text, new Vector2((m_graphics.PreferredBackBufferWidth / 2 - m_font.MeasureString(text).X / 2), m_graphics.PreferredBackBufferHeight / divideBy), color);
             m_spriteBatch.End();
+        }
+
+        internal void DrawGameWon()
+        {
+            string text = "Congratulations you have completed the game!";
+
+            DrawText(text, Color.White, 4, m_font);
+            DrawOptions(m_gameWonOptionList);
         }
     }
 }

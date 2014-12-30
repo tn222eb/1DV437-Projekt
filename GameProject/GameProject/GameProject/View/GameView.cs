@@ -28,6 +28,8 @@ namespace GameProject.View
         private Texture2D m_tileTexture;
         private Texture2D m_groundTexture;
         private Texture2D m_emptyTexture;
+        private Texture2D m_bombTexture;
+        private Texture2D m_coinTexture;
 
         public enum Movement
         {
@@ -46,6 +48,8 @@ namespace GameProject.View
             this.m_playerRightWalkTexture = content.Load<Texture2D>("PlayerRightWalkAnimation");
             this.m_groundTexture = content.Load<Texture2D>("GroundTile");
             this.m_emptyTexture = content.Load<Texture2D>("EmptyTile");
+            this.m_bombTexture = content.Load<Texture2D>("Bomb");
+            this.m_coinTexture = content.Load<Texture2D>("Coin");
             this.m_playerTexture = m_playerRightWalkTexture;
         }
 
@@ -93,7 +97,7 @@ namespace GameProject.View
             }
         }
 
-        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState)
+        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = camera.GetScale();
@@ -109,9 +113,29 @@ namespace GameProject.View
                 }
             }
 
+            for (int i = 0; i < coinPositions.Count; i++)
+            {
+                Vector2 coinViewPosition = camera.GetViewPosition(coinPositions[i].X, coinPositions[i].Y, viewPortSize);
+                DrawCoinAt(coinViewPosition, scale);
+            }
+
+            for (int i = 0; i < bombPositions.Count; i++)
+            {
+                Vector2 bombViewPosition = camera.GetViewPosition(bombPositions[i].X, bombPositions[i].Y, viewPortSize);
+                DrawBombAt(bombViewPosition, scale);
+            }
+
             Vector2 playerViewPosition = camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
             DrawPlayerAt(playerViewPosition, scale);
+
             m_spriteBatch.End();
+        }
+
+        private void DrawCoinAt(Vector2 coinViewPosition, float scale)
+        {
+            Rectangle rectangle = new Rectangle((int)(coinViewPosition.X - scale / 2.0), (int)(coinViewPosition.Y - scale), (int)scale, (int)scale);
+
+            m_spriteBatch.Draw(m_coinTexture, rectangle, Color.White);
         }
 
         private void DrawTile(float x, float y, GameProject.Model.Level.Tile tile, float scale)
@@ -136,6 +160,13 @@ namespace GameProject.View
             m_destinationRectangle = new Rectangle((int)(viewCenterPosition.X - scale / 2.0f), (int)(viewCenterPosition.Y - scale), (int)scale, (int)scale);
 
             m_spriteBatch.Draw(m_playerTexture, m_destinationRectangle, m_sourceRectangle, Color.White);
+        }
+
+        private void DrawBombAt(Vector2 bombViewPosition, float scale)
+        {
+            Rectangle rectangle = new Rectangle((int)(bombViewPosition.X - scale / 2.0f), (int)(bombViewPosition.Y - scale), (int)scale, (int)scale);
+
+            m_spriteBatch.Draw(m_bombTexture, rectangle, Color.White);
         }
 
         public bool DidPlayerPressGoLeft()

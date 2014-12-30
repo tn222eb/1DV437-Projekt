@@ -10,9 +10,7 @@ namespace GameProject.Model
     class Level
     {
         public const int LEVEL_WIDTH = 22;
-        public const int LEVEL_HEIGHT = 7;
-        private const int LEVEL_ONE = 1;
-        private const int LEVEL_TWO = 2;
+        public const int LEVEL_HEIGHT = 10;
 
         public Tile[,] m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
 
@@ -20,8 +18,12 @@ namespace GameProject.Model
         private char m_playerStartChar = 's';
         private char m_holeChar = 'h';
         private char m_playerFinishChar = 'f';
-
+        private char m_bombChar = 'e';
+        private char m_coinChar = 'c';
+        
         private Levels m_currentLevel;
+        private List<Bomb> m_bombList = new List<Bomb>();
+        private List<Coin> m_coinList = new List<Coin>(); 
 
         public enum Tile
         {
@@ -34,7 +36,8 @@ namespace GameProject.Model
         public enum Levels
         {
             ONE = 0,
-            TWO = 1
+            TWO,
+            THREE
         }
 
         public Vector2 PlayerStartingPosition
@@ -43,28 +46,26 @@ namespace GameProject.Model
             set;
         }
 
+        public List<Bomb> Bombs
+        {
+            get
+            {
+                return m_bombList;
+            }
+        }
+
+        public List<Coin> Coins
+        {
+            get
+            {
+                return m_coinList;
+            }
+        }
+
         public Levels CurrentLevel
         {
             get { return m_currentLevel; }
             set { m_currentLevel = value; }
-        }
-
-        internal void LoadLevel()
-        {
-            string levelString;
-
-            switch (m_currentLevel)
-            {
-                case Levels.ONE:
-                    levelString = ImportLevel.ReadLevel(LEVEL_ONE);
-                    GenerateLevel(levelString);
-                    break;
-
-                case Levels.TWO:
-                    levelString = ImportLevel.ReadLevel(LEVEL_TWO);
-                    GenerateLevel(levelString);
-                    break;
-            }
         }
 
         public Level()
@@ -73,8 +74,34 @@ namespace GameProject.Model
             LoadLevel();
         }
 
+        public void LoadLevel()
+        {
+            string levelString;
+
+            switch (m_currentLevel)
+            {
+                case Levels.ONE:
+                    levelString = ImportLevel.ReadLevel(1);
+                    GenerateLevel(levelString);
+                    break;
+
+                case Levels.TWO:
+                    levelString = ImportLevel.ReadLevel(2);
+                    GenerateLevel(levelString);
+                    break;
+
+                case Levels.THREE:
+                    levelString = ImportLevel.ReadLevel(3);
+                    GenerateLevel(levelString);
+                    break;
+            }
+        }
+
         public void GenerateLevel(string levelString)
         {
+            m_bombList.Clear();
+            m_coinList.Clear();
+
             for (int x = 0; x < LEVEL_WIDTH; x++)
             {
                 for (int y = 0; y < LEVEL_HEIGHT; y++)
@@ -88,7 +115,7 @@ namespace GameProject.Model
 
                     else if (levelString[index] == m_playerStartChar)
                     {
-                        PlayerStartingPosition = new Vector2(x + 0.5f, y);
+                        PlayerStartingPosition = new Vector2(x + 0.5f, y + 0.99f);
                         m_tiles[x, y] = Tile.EMPTY;
                     }
 
@@ -100,6 +127,18 @@ namespace GameProject.Model
                     else if (levelString[index] == m_playerFinishChar) 
                     {
                         m_tiles[x, y] = Tile.FINISH;
+                    }
+
+                    else if (levelString[index] == m_bombChar) 
+                    {
+                        m_bombList.Add(new Bomb(new Vector2(x, y + 1)));
+                        m_tiles[x, y] = Tile.EMPTY;
+                    }
+
+                    else if (levelString[index] == m_coinChar) 
+                    {
+                        m_coinList.Add(new Coin(new Vector2(x + 0.5f, y + 1)));
+                        m_tiles[x, y] = Tile.EMPTY;
                     }
 
                     else
@@ -185,6 +224,15 @@ namespace GameProject.Model
                 }
             }
 
+            return false;
+        }
+
+        public bool IsBombStandingByEdgeOfBlocked(Vector2 position)
+        {
+            if ((m_tiles[(int)position.X, (int)position.Y] == Tile.HOLE) || m_tiles[(int)position.X, (int)position.Y] == Tile.EMPTY)
+            {
+                return true;
+            }
             return false;
         }
     }

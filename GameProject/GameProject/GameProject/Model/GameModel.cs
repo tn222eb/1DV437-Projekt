@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using GameProject.View;
+using GameProject.Controller;
 
 namespace GameProject.Model
 {
@@ -14,11 +16,22 @@ namespace GameProject.Model
             MAIN_MENU,
             GAME_OVER,
             LEVEL_FINISHED,
+            LAST_LEVEL_FINISHED,
             PAUSE
         }
 
+        public enum Direction
+        {
+            LEFT = 0,
+            RIGHT
+        }
+
+        private List<Bomb> m_bombsList = new List<Bomb>();
+        private List<Coin> m_coinList;
+
         Player m_player;
         Level m_level;
+
         GameState m_gameState = GameState.MAIN_MENU;
 
         bool m_hasCollidedWithGround = false;
@@ -64,15 +77,37 @@ namespace GameProject.Model
         public void StartGame() 
         {
             m_player.Position = m_level.PlayerStartingPosition;
+            m_bombsList = m_level.Bombs;
+            m_coinList = m_level.Coins;
         }
 
-        public void Update(float totalElapsedSeconds)
+        public void Update(float totalElapsedSeconds, ISoundObserver soundObserver)
         {
             UpdatePlayer(totalElapsedSeconds);
+            UpdateBomb(totalElapsedSeconds);
 
             CheckIfInHole();
-            CheckIfDead(totalElapsedSeconds);
-            CheckIfLevelFinished(totalElapsedSeconds);
+            CheckIfCollideWithBomb(soundObserver);
+            CheckIfDead();
+            CheckIfLevelFinished(soundObserver);
+            //CheckIfPlayerPickedUpCoin(soundObserver);
+        }
+
+        private void CheckIfPlayerPickedUpCoin(ISoundObserver soundObserver)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CheckIfCollideWithBomb(ISoundObserver soundObserver)
+        {
+            foreach (Bomb bomb in m_bombsList) 
+            {
+                if (CollisionHandler.IsCollidingWithBomb(m_player, bomb))
+                {
+                    m_player.RemoveLife();
+                    soundObserver.BombExplode();
+                }
+            }
         }
 
         private void UpdatePlayer(float totalElapsedSeconds)
@@ -94,6 +129,36 @@ namespace GameProject.Model
             }
         }
 
+        private void UpdateBomb(float totalElapsedSeconds)
+        {
+            foreach (Bomb bomb in m_bombsList)
+            {
+                if (bomb.Direction == Direction.RIGHT)
+                {
+                    Vector2 bombCenterPosition = bomb.Position;
+                    bombCenterPosition.X += bomb.Size.X / 2.0f;
+
+                    if (m_level.IsBombStandingByEdgeOfBlocked(bombCenterPosition))
+                    {
+                        bomb.MoveLeft();
+                    }
+                }
+
+                else if (bomb.Direction == Direction.LEFT)
+                {
+                    Vector2 bombCenterPosition = bomb.Position;
+                    bombCenterPosition.X -= bomb.Size.X / 2.0f;
+
+                    if (m_level.IsBombStandingByEdgeOfBlocked(bombCenterPosition))
+                    {
+                        bomb.MoveRight();
+                    }
+                }
+
+                bomb.Update(totalElapsedSeconds);
+            }
+        }
+
         public void StandStill()
         {
             m_player.Velocity = new Vector2(0, m_player.Velocity.Y);
@@ -109,15 +174,23 @@ namespace GameProject.Model
             return m_hasCollidedWithGround;
         }
 
-        private void CheckIfLevelFinished(float totalElapsedSeconds)
+        private void CheckIfLevelFinished(ISoundObserver soundObserver)
         {
             if (m_level.IsAtLevelFinish(m_player.Position, m_player.Size))
             {
                 m_gameState = GameState.LEVEL_FINISHED;
+                
+                if (m_level.CurrentLevel == Level.Levels.THREE)
+                {
+                    SetGameState = GameModel.GameState.LAST_LEVEL_FINISHED;
+                }
+
+                m_level.CurrentLevel++;
+                soundObserver.LevelCompleted();
             }
         }
 
-        private void CheckIfDead(float totalElapsedSeconds)
+        private void CheckIfDead()
         {
             if (m_player.GetRemainingLives() <= 0)
             {
@@ -128,6 +201,7 @@ namespace GameProject.Model
         public void RestartGame() 
         {
             m_player = new Player();
+
             StartGame();
         }
 
@@ -139,12 +213,40 @@ namespace GameProject.Model
             }
         }
 
-        public void LoadNextLevel()
+        public void LoadLevel()
         {
-            m_level.CurrentLevel++;
             m_level.LoadLevel();
 
             StartGame();
+        }
+
+        internal void ResetLevel()
+        {
+            m_level.CurrentLevel = Level.Levels.ONE;
+        }
+
+        public List<Vector2> GetBombPositions()
+        {
+            List<Vector2> bombPositions = new List<Vector2>();
+
+            foreach (Bomb bomb in m_bombsList)
+            {
+                bombPositions.Add(bomb.Position);
+            }
+
+            return bombPositions;
+        }
+
+        public List<Vector2> GetCoinPositions()
+        {
+            List<Vector2> coinPositions = new List<Vector2>();
+
+            foreach(Coin coin in m_coinList)
+            {
+                coinPositions.Add(coin.Position);
+            }
+
+            return coinPositions;
         }
     }
 }

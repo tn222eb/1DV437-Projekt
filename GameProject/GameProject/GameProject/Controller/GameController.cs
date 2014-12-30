@@ -24,9 +24,9 @@ namespace GameProject
         private GameView m_gameView;
         private GameModel m_gameModel;
         private Camera m_camera;
-        private SoundEffect m_jumpEffect;
 
         private MenuView m_menuView;
+        private SoundView m_sound;
 
         public GameController()
         {
@@ -48,7 +48,6 @@ namespace GameProject
         {
             // TODO: Add your initialization logic here
             m_camera = new Camera();
-            m_gameModel = new GameModel();
             base.Initialize();
         }
 
@@ -62,11 +61,11 @@ namespace GameProject
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            m_jumpEffect = Content.Load<SoundEffect>("Jump");
 
             m_gameView = new GameView(spriteBatch, m_gameModel, Content);
+            m_sound = new SoundView(Content);
             m_menuView = new MenuView(spriteBatch, graphics);
-
+            m_gameModel = new GameModel();
             m_menuView.LoadContent(Content);
         }
 
@@ -97,10 +96,21 @@ namespace GameProject
             switch (m_gameModel.GetGameState)
             {
                 case GameModel.GameState.MAIN_MENU:
+
+                    if (m_sound.BackGroundSongPlaying)
+                    {
+                        m_sound.StopGameBackgroundSong();
+                    }
+    
                     OptionSelected();
                     break;
 
                 case GameModel.GameState.PLAY:
+
+                    if (m_sound.BackGroundSongPlaying == false)
+                    {
+                        m_sound.StartGameBackgroundSong();
+                    }
 
                     if (playerPause)
                     {
@@ -112,7 +122,7 @@ namespace GameProject
                         if (m_gameModel.CanPlayerJump())
                         {
                             m_gameModel.Jump();
-                            m_jumpEffect.Play();
+                            m_sound.PlayerJump();
                         }
                     }
 
@@ -134,21 +144,54 @@ namespace GameProject
                         m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.STAND);
                     }
 
-                    m_gameModel.Update(elapsedTimeSeconds);
+                    m_gameModel.Update(elapsedTimeSeconds, m_sound);
 
                     break;
 
                 case GameModel.GameState.GAME_OVER:
+
+                    if (m_sound.BackGroundSongPlaying)
+                    {
+                        m_sound.StopGameBackgroundSong();
+                    }
+
                     OptionSelected();
                     m_gameModel.RestartGame();
                     break;
 
                 case GameModel.GameState.LEVEL_FINISHED:
+
+                    if (m_sound.BackGroundSongPlaying)
+                    {
+                        m_sound.StopGameBackgroundSong();
+                    }
+
                     OptionSelected();
-                    m_gameModel.LoadNextLevel();
+
+                    m_gameModel.LoadLevel();
+
+                    break;
+
+                case GameModel.GameState.LAST_LEVEL_FINISHED:
+
+                    if (m_sound.BackGroundSongPlaying)
+                    {
+                        m_sound.StopGameBackgroundSong();
+                    }
+
+                    OptionSelected();
+
+                    m_gameModel.ResetLevel();
+                    m_gameModel.LoadLevel();
                     break;
 
                 case GameModel.GameState.PAUSE:
+
+                    if (m_sound.BackGroundSongPlaying)
+                    {
+                        m_sound.StopGameBackgroundSong();
+                    }
+
                     OptionSelected();
                     break;
             }
@@ -162,7 +205,7 @@ namespace GameProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.MidnightBlue);
+            GraphicsDevice.Clear(Color.MediumSlateBlue);
 
             switch (m_gameModel.GetGameState)
             {
@@ -171,7 +214,7 @@ namespace GameProject
                         GraphicsDevice.Viewport,
                         new Vector2(Level.LEVEL_WIDTH, Level.LEVEL_HEIGHT));
 
-                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState);
+                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState, m_gameModel.GetBombPositions(), m_gameModel.GetCoinPositions());
                     break;
 
                 case GameModel.GameState.MAIN_MENU:
@@ -188,6 +231,10 @@ namespace GameProject
 
                 case GameModel.GameState.LEVEL_FINISHED:
                     m_menuView.DrawNextLevel();
+                    break;
+
+                case GameModel.GameState.LAST_LEVEL_FINISHED:
+                    m_menuView.DrawGameWon();
                     break;
             }
 
