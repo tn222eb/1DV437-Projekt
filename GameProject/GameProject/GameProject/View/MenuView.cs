@@ -23,15 +23,18 @@ namespace GameProject
         List<string> m_pauseOptionList = new List<string>();
         List<string> m_gameOverOptionList = new List<string>();
 
-        private SpriteFont m_font; 
+        private SpriteFont m_font;
         private GraphicsDeviceManager m_graphics;
         private SpriteBatch m_spriteBatch;
 
         int m_optionSelected = 0;
+
         private SpriteFont m_biggerFont;
         private List<string> m_gameWonOptionList = new List<string>();
 
-        public MenuView(SpriteBatch spriteBatch, GraphicsDeviceManager graphics)   
+        private GameModel m_gameModel;
+
+        public MenuView(SpriteBatch spriteBatch, GraphicsDeviceManager graphics, GameModel gameModel)
         {
             m_startOptionList.Add("Play");
             m_startOptionList.Add("Exit");
@@ -50,6 +53,7 @@ namespace GameProject
 
             this.m_spriteBatch = spriteBatch;
             this.m_graphics = graphics;
+            this.m_gameModel = gameModel;
         }
 
         public void LoadContent(ContentManager Content)
@@ -73,7 +77,7 @@ namespace GameProject
             if (CheckKeyboard(Keys.Down))
             {
                 if (m_optionSelected < m_startOptionList.Count - 1)
-                {        
+                {
                     m_optionSelected++;
                 }
             }
@@ -91,10 +95,14 @@ namespace GameProject
             return m_optionSelected;
         }
 
+        /// <summary>
+        /// Draw options to choose
+        /// </summary>
+        /// <param name="list"></param>
         public void DrawOptions(List<String> list)
         {
             Color color;
- 
+
             for (int i = 0; i < list.Count; i++)
             {
                 if (i == m_optionSelected)
@@ -107,14 +115,17 @@ namespace GameProject
                     color = Color.White;
                 }
 
-                m_spriteBatch.Begin();               
+                m_spriteBatch.Begin();
                 m_spriteBatch.DrawString(m_font, list[i], new Vector2((m_graphics.PreferredBackBufferWidth / 2)
                                         - (m_font.MeasureString(list[i]).X / 2), (m_graphics.PreferredBackBufferHeight / 2)
                                         - (m_font.LineSpacing * list.Count) / 2 + ((m_font.LineSpacing + 2) * i)), color);
-                m_spriteBatch.End();                
+                m_spriteBatch.End();
             }
         }
 
+        /// <summary>
+        /// Draw start menu screen
+        /// </summary>
         public void DrawMenu()
         {
             string text = "Frank Jump";
@@ -125,42 +136,81 @@ namespace GameProject
             DrawOptions(m_startOptionList);
         }
 
+        /// <summary>
+        /// Draw between level screen
+        /// </summary>
         public void DrawNextLevel()
         {
-            string text = "Level Completed!";
+            string levelPassedText = "";
+            string instructionText = "";
 
-            DrawText(text, Color.White, 4, m_font);
+            switch (m_gameModel.CurrentLevel())
+            {
+                case Level.Levels.TWO:
+                    instructionText = "You must avoid contact with bomb to complete next level!";
+                    levelPassedText = "Level 1 completed!";
+
+                    DrawText(instructionText, Color.White, 4, m_font);
+                    break;
+
+                case Level.Levels.THREE:
+                    instructionText = "You must collect all coins to complete next level!";
+                    levelPassedText = "Level 2 completed!";
+
+                    DrawText(instructionText, Color.White, 4, m_font);
+                    break;
+            }
+
+            DrawText(levelPassedText, Color.White, 8, m_font);
             DrawOptions(m_continueOptionList);
         }
 
+        /// <summary>
+        /// Draw pause screen
+        /// </summary>
         public void DrawPause()
         {
-            string text = "Game Paused";
+            string pauseGameText = "Game Paused";
 
-            DrawText(text, Color.White, 4, m_font);
+            DrawText(pauseGameText, Color.White, 8, m_font);
             DrawOptions(m_pauseOptionList);
         }
 
+        /// <summary>
+        /// Draw game over screen
+        /// </summary>
         public void DrawGameOver()
         {
-            string text = "Game Over!";
+            string gameOverText = "Game Over!";
 
-            DrawText(text, Color.White, 4, m_font);
+            DrawText(gameOverText, Color.White, 8, m_font);
             DrawOptions(m_gameOverOptionList);
         }
 
-        private void DrawText(string text, Color color, int divideBy, SpriteFont font) 
+        /// <summary>
+        /// Used for draw text on screen
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="color"></param>
+        /// <param name="divideBy"></param>
+        /// <param name="font"></param>
+        private void DrawText(string text, Color color, int divideBy, SpriteFont font)
         {
             m_spriteBatch.Begin();
             m_spriteBatch.DrawString(font, text, new Vector2((m_graphics.PreferredBackBufferWidth / 2 - m_font.MeasureString(text).X / 2), m_graphics.PreferredBackBufferHeight / divideBy), color);
             m_spriteBatch.End();
         }
 
+        /// <summary>
+        /// Draw has won game screen
+        /// </summary>
         internal void DrawGameWon()
         {
-            string text = "Congratulations you have completed the game!";
+            string levelPassedText = "Level 3 completed!";
+            string wonGameText = "Congratulations you have won the game!";
 
-            DrawText(text, Color.White, 4, m_font);
+            DrawText(levelPassedText, Color.White, 8, m_font);
+            DrawText(wonGameText, Color.White, 4, m_font);
             DrawOptions(m_gameWonOptionList);
         }
     }

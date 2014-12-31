@@ -90,14 +90,29 @@ namespace GameProject.Model
             CheckIfCollideWithBomb(soundObserver);
             CheckIfDead();
             CheckIfLevelFinished(soundObserver);
-            //CheckIfPlayerPickedUpCoin(soundObserver);
+            CheckIfPlayerPickedUpCoin(soundObserver);
         }
 
+        /// <summary>
+        /// Check if player have collided with coin
+        /// </summary>
+        /// <param name="soundObserver"></param>
         private void CheckIfPlayerPickedUpCoin(ISoundObserver soundObserver)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < m_coinList.Count; i++)
+            {
+                if (CollisionHandler.IsCollidingWithCoin(m_player, m_coinList[i]))
+                {
+                    m_coinList.Remove(m_coinList[i]);
+                    soundObserver.PlayerPickUpCoin();
+                }
+            }
         }
 
+        /// <summary>
+        /// Check if player have collided with bomb
+        /// </summary>
+        /// <param name="soundObserver"></param>
         private void CheckIfCollideWithBomb(ISoundObserver soundObserver)
         {
             foreach (Bomb bomb in m_bombsList) 
@@ -169,14 +184,36 @@ namespace GameProject.Model
             m_player.DoJump();
         }
 
+        /// <summary>
+        /// Get a bool if player can move more to right based on if have passed level finish
+        /// </summary>
+        /// <returns>Returns true or false</returns>
+        public bool CanPlayerMoveRight() 
+        {
+            if (m_level.IsAtLevelFinish(m_player.Position, m_player.Size / 2.0f)) 
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Get a boolean based on if player have landed
+        /// </summary>
+        /// <returns>Returns true or false</returns>
         public bool CanPlayerJump()
         {
             return m_hasCollidedWithGround;
         }
 
+        /// <summary>
+        /// Check if player have passed level finish
+        /// </summary>
+        /// <param name="soundObserver"></param>
         private void CheckIfLevelFinished(ISoundObserver soundObserver)
         {
-            if (m_level.IsAtLevelFinish(m_player.Position, m_player.Size))
+            if (m_level.IsAtLevelFinish(m_player.Position, m_player.Size) && CheckIfAllCoinsIsPickedUp())
             {
                 m_gameState = GameState.LEVEL_FINISHED;
                 
@@ -190,6 +227,18 @@ namespace GameProject.Model
             }
         }
 
+        /// <summary>
+        /// Check if player have picked up all coins
+        /// </summary>
+        /// <returns></returns>
+        private bool CheckIfAllCoinsIsPickedUp() 
+        {
+            return m_coinList.Count == 0;
+        }
+
+        /// <summary>
+        /// Check if player is dead
+        /// </summary>
         private void CheckIfDead()
         {
             if (m_player.GetRemainingLives() <= 0)
@@ -198,13 +247,21 @@ namespace GameProject.Model
             }
         }
 
-        public void RestartGame() 
+        /// <summary>
+        /// Restart current level
+        /// </summary>
+        public void RestartLevel() 
         {
             m_player = new Player();
+
+            m_level.LoadLevel();
 
             StartGame();
         }
 
+        /// <summary>
+        /// Check if player have fallen in hole
+        /// </summary>
         private void CheckIfInHole()
         {
             if (m_level.IsInHole(m_player.Position, m_player.Size))
@@ -213,6 +270,9 @@ namespace GameProject.Model
             }
         }
 
+        /// <summary>
+        /// Load level
+        /// </summary>
         public void LoadLevel()
         {
             m_level.LoadLevel();
@@ -220,11 +280,18 @@ namespace GameProject.Model
             StartGame();
         }
 
+        /// <summary>
+        /// Reset current level back to level 1
+        /// </summary>
         internal void ResetLevel()
         {
             m_level.CurrentLevel = Level.Levels.ONE;
         }
 
+        /// <summary>
+        /// Get bomb positions
+        /// </summary>
+        /// <returns>Returns a list with position of bombs</returns>
         public List<Vector2> GetBombPositions()
         {
             List<Vector2> bombPositions = new List<Vector2>();
@@ -237,6 +304,10 @@ namespace GameProject.Model
             return bombPositions;
         }
 
+        /// <summary>
+        /// Get coin positions
+        /// </summary>
+        /// <returns>Returns a list with position of coins</returns>
         public List<Vector2> GetCoinPositions()
         {
             List<Vector2> coinPositions = new List<Vector2>();
@@ -248,5 +319,14 @@ namespace GameProject.Model
 
             return coinPositions;
         }
+
+        /// <summary>
+        /// Get current level
+        /// </summary>
+        /// <returns>Returns a level object to know what level currently on</returns>
+        public GameProject.Model.Level.Levels CurrentLevel() 
+        {
+            return m_level.CurrentLevel;
+        } 
     }
 }

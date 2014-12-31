@@ -28,16 +28,19 @@ namespace GameProject.Model
                     int indexOfN = levelString.IndexOf("\n");
                     int indexOfR = levelString.IndexOf("\r");
 
+                    // If theres a \n  in levelString then remove it
                     if (indexOfN != -1)
                     {
                         levelString = levelString.Remove(indexOfN, 1);
                     }
 
+                    // If theres a \r in levelString then remove it
                     if (indexOfR != -1)
                     {
                         levelString = levelString.Remove(indexOfR, 1);
                     }
 
+                    // If theres no \r and no \n then set levelStringFixed to true to exit while-loop
                     if (indexOfN == -1 && indexOfR == -1)
                     {
                         levelStringFixed = true;

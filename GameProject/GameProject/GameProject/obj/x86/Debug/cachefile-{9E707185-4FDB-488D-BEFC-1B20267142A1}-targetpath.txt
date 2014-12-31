@@ -11,6 +11,7 @@ Content\LevelCompleted.xnb
 Content\BackgroundSong.xnb
 Content\BackgroundSong.wma
 Content\Coin.xnb
+Content\CoinPickedUp.xnb
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
 Content\GroundTile.png

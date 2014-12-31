@@ -110,6 +110,15 @@
       <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb</Output>
       <Time>2014-12-30T23:02:22.0106142+01:00</Time>
     </Item>
+    <Item>
+      <Source>CoinPickedUp.wav</Source>
+      <Name>CoinPickedUp</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb</Output>
+      <Time>2014-12-31T01:03:10.0948729+01:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID Null="true" />

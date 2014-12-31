@@ -97,3 +97,4 @@ C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\Gam
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.mp3
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb

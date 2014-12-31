@@ -109,5 +109,18 @@ namespace GameProject.Model
 
             return false;
         }
+
+        internal static bool IsCollidingWithCoin(Player player, Coin coin)
+        {
+            Collider colliderOfPlayer = new Collider(player.Position, (player.Size.Y / 2.0f));
+            Collider colliderOfCoin = new Collider(coin.Position, (coin.Size.Y / 2.0f));
+
+            if (colliderOfPlayer.DoCollide(colliderOfCoin))
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

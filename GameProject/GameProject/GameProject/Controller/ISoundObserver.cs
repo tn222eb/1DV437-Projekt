@@ -10,5 +10,6 @@ namespace GameProject.Controller
         void PlayerJump();
         void BombExplode();
         void LevelCompleted();
+        void PlayerPickUpCoin();
     }
 }

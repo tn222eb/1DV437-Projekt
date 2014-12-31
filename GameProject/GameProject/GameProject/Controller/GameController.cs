@@ -61,11 +61,10 @@ namespace GameProject
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-
+            m_gameModel = new GameModel();
             m_gameView = new GameView(spriteBatch, m_gameModel, Content);
             m_sound = new SoundView(Content);
-            m_menuView = new MenuView(spriteBatch, graphics);
-            m_gameModel = new GameModel();
+            m_menuView = new MenuView(spriteBatch, graphics, m_gameModel);
             m_menuView.LoadContent(Content);
         }
 
@@ -103,6 +102,7 @@ namespace GameProject
                     }
     
                     OptionSelected();
+
                     break;
 
                 case GameModel.GameState.PLAY:
@@ -128,8 +128,11 @@ namespace GameProject
 
                     if (playerGoesRight)
                     {
-                        m_gameModel.MoveRight();
-                        m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.RIGHT);
+                        if (m_gameModel.CanPlayerMoveRight())
+                        {
+                            m_gameModel.MoveRight();
+                            m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.RIGHT);
+                        }
                     }
 
                     else if (playerGoesLeft)
@@ -156,7 +159,9 @@ namespace GameProject
                     }
 
                     OptionSelected();
-                    m_gameModel.RestartGame();
+
+                    m_gameModel.RestartLevel();
+
                     break;
 
                 case GameModel.GameState.LEVEL_FINISHED:
@@ -183,6 +188,7 @@ namespace GameProject
 
                     m_gameModel.ResetLevel();
                     m_gameModel.LoadLevel();
+
                     break;
 
                 case GameModel.GameState.PAUSE:
@@ -241,6 +247,9 @@ namespace GameProject
             base.Draw(gameTime);
         }
 
+        /// <summary>
+        /// Play or exit depending on what player selected from option menu
+        /// </summary>
         private void OptionSelected() 
         {
             m_menuView.Update();

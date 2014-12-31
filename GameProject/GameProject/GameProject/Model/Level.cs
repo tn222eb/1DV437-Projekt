@@ -12,7 +12,7 @@ namespace GameProject.Model
         public const int LEVEL_WIDTH = 22;
         public const int LEVEL_HEIGHT = 10;
 
-        public Tile[,] m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
+        public Tile[,] m_tiles;
 
         private char m_blockedChar = 'x';
         private char m_playerStartChar = 's';
@@ -70,6 +70,8 @@ namespace GameProject.Model
 
         public Level()
         {
+            m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
+
             m_currentLevel = Levels.ONE;
             LoadLevel();
         }
@@ -126,12 +128,12 @@ namespace GameProject.Model
 
                     else if (levelString[index] == m_playerFinishChar) 
                     {
-                        m_tiles[x, y] = Tile.FINISH;
+                        m_tiles[x - 1, y] = Tile.FINISH;
                     }
 
                     else if (levelString[index] == m_bombChar) 
                     {
-                        m_bombList.Add(new Bomb(new Vector2(x, y + 1)));
+                        m_bombList.Add(new Bomb(new Vector2(x + 0.5f, y + 1)));
                         m_tiles[x, y] = Tile.EMPTY;
                     }
 

@@ -97,6 +97,16 @@ namespace GameProject.View
             }
         }
 
+        /// <summary>
+        /// Draw player, tiles, bombs, coins and set camera on player
+        /// </summary>
+        /// <param name="viewport"></param>
+        /// <param name="camera"></param>
+        /// <param name="level"></param>
+        /// <param name="playerPosition"></param>
+        /// <param name="gameState"></param>
+        /// <param name="bombPositions"></param>
+        /// <param name="coinPositions"></param>
         public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
@@ -116,28 +126,40 @@ namespace GameProject.View
             for (int i = 0; i < coinPositions.Count; i++)
             {
                 Vector2 coinViewPosition = camera.GetViewPosition(coinPositions[i].X, coinPositions[i].Y, viewPortSize);
-                DrawCoinAt(coinViewPosition, scale);
+                DrawCoin(coinViewPosition, scale);
             }
 
             for (int i = 0; i < bombPositions.Count; i++)
             {
                 Vector2 bombViewPosition = camera.GetViewPosition(bombPositions[i].X, bombPositions[i].Y, viewPortSize);
-                DrawBombAt(bombViewPosition, scale);
+                DrawBomb(bombViewPosition, scale);
             }
 
             Vector2 playerViewPosition = camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
-            DrawPlayerAt(playerViewPosition, scale);
+            DrawPlayer(playerViewPosition, scale);
 
             m_spriteBatch.End();
         }
 
-        private void DrawCoinAt(Vector2 coinViewPosition, float scale)
+        /// <summary>
+        /// Draw coin
+        /// </summary>
+        /// <param name="coinViewPosition"></param>
+        /// <param name="scale"></param>
+        private void DrawCoin(Vector2 coinViewPosition, float scale)
         {
             Rectangle rectangle = new Rectangle((int)(coinViewPosition.X - scale / 2.0), (int)(coinViewPosition.Y - scale), (int)scale, (int)scale);
 
             m_spriteBatch.Draw(m_coinTexture, rectangle, Color.White);
         }
 
+        /// <summary>
+        /// Draw tile
+        /// </summary>
+        /// <param name="x"></param>
+        /// <param name="y"></param>
+        /// <param name="tile"></param>
+        /// <param name="scale"></param>
         private void DrawTile(float x, float y, GameProject.Model.Level.Tile tile, float scale)
         {
             if (tile == Level.Tile.BLOCKED)
@@ -155,14 +177,24 @@ namespace GameProject.View
             m_spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
         }
 
-        private void DrawPlayerAt(Vector2 viewCenterPosition, float scale)
+        /// <summary>
+        /// Draw player
+        /// </summary>
+        /// <param name="viewCenterPosition"></param>
+        /// <param name="scale"></param>
+        private void DrawPlayer(Vector2 viewCenterPosition, float scale)
         {
             m_destinationRectangle = new Rectangle((int)(viewCenterPosition.X - scale / 2.0f), (int)(viewCenterPosition.Y - scale), (int)scale, (int)scale);
 
             m_spriteBatch.Draw(m_playerTexture, m_destinationRectangle, m_sourceRectangle, Color.White);
         }
 
-        private void DrawBombAt(Vector2 bombViewPosition, float scale)
+        /// <summary>
+        /// Draw bomb
+        /// </summary>
+        /// <param name="bombViewPosition"></param>
+        /// <param name="scale"></param>
+        private void DrawBomb(Vector2 bombViewPosition, float scale)
         {
             Rectangle rectangle = new Rectangle((int)(bombViewPosition.X - scale / 2.0f), (int)(bombViewPosition.Y - scale), (int)scale, (int)scale);
 
@@ -189,12 +221,12 @@ namespace GameProject.View
             return Keyboard.GetState().IsKeyDown(Keys.Escape);
         }
 
-        internal bool DidPlayerWantToStartGame(int selected)
+        public bool DidPlayerWantToStartGame(int selected)
         {
             return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 0;
         }
 
-        internal bool DidPlayerWantToExitGame(int selected)
+        public bool DidPlayerWantToExitGame(int selected)
         {
             return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 1;
         }
