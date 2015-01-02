@@ -72,7 +72,7 @@ namespace GameProject.Model
         {
             m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
 
-            m_currentLevel = Levels.ONE;
+            m_currentLevel = Levels.TWO;
             LoadLevel();
         }
 

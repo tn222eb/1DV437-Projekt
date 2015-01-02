@@ -207,7 +207,7 @@ namespace GameProject
         internal void DrawGameWon()
         {
             string levelPassedText = "Level 3 completed!";
-            string wonGameText = "Congratulations you have won the game!";
+            string wonGameText = "Congratulations you have finished the game!";
 
             DrawText(levelPassedText, Color.White, 8, m_font);
             DrawText(wonGameText, Color.White, 4, m_font);

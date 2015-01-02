@@ -13,7 +13,7 @@ namespace GameProject.Model
         public Coin(Vector2 position)
         {
             m_modelCenterPosition = position;
-            Size = new Vector2(0.2f, 0.2f);
+            Size = new Vector2(1f, 1f);
         }
 
         public Vector2 Size

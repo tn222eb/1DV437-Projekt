@@ -7,10 +7,11 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using GameProject.Model;
 using Microsoft.Xna.Framework.Content;
+using GameProject.Controller;
 
 namespace GameProject.View
 {
-    class GameView
+    class GameView : IPickUpObserver
     {
         private GameModel m_gameModel;
 
@@ -30,6 +31,11 @@ namespace GameProject.View
         private Texture2D m_emptyTexture;
         private Texture2D m_bombTexture;
         private Texture2D m_coinTexture;
+
+        private Vector2 m_coinPosition;
+        private bool m_showCoinSplatter = false;
+
+        private CoinSplatterSystem m_coinSplatterSystem = new CoinSplatterSystem();
 
         public enum Movement
         {
@@ -70,6 +76,7 @@ namespace GameProject.View
                     {
                         m_frames = 0;
                     }
+
                     else
                     {
                         m_frames++;
@@ -107,7 +114,7 @@ namespace GameProject.View
         /// <param name="gameState"></param>
         /// <param name="bombPositions"></param>
         /// <param name="coinPositions"></param>
-        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions)
+        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions, float elapsedTime)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = camera.GetScale();
@@ -133,6 +140,11 @@ namespace GameProject.View
             {
                 Vector2 bombViewPosition = camera.GetViewPosition(bombPositions[i].X, bombPositions[i].Y, viewPortSize);
                 DrawBomb(bombViewPosition, scale);
+            }
+
+            if (m_showCoinSplatter) 
+            {
+                m_coinSplatterSystem.DrawCoinSplatter(m_spriteBatch, m_coinTexture, elapsedTime ,camera.GetViewPosition(m_coinPosition.X, m_coinPosition.Y, viewPortSize));
             }
 
             Vector2 playerViewPosition = camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
@@ -229,6 +241,20 @@ namespace GameProject.View
         public bool DidPlayerWantToExitGame(int selected)
         {
             return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 1;
+        }
+
+        public void PlayerPickUpCoinAt(Vector2 coinPosition)
+        {
+            m_showCoinSplatter = true;
+            m_coinPosition = coinPosition;
+
+            m_coinSplatterSystem.GenerateCoinParticles();
+        }
+
+        public bool ShowCoinSplatter
+        {
+            get { return m_showCoinSplatter; }
+            set { m_showCoinSplatter = value; }
         }
     }
 }

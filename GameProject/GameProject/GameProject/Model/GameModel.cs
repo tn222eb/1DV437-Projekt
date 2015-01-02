@@ -81,7 +81,7 @@ namespace GameProject.Model
             m_coinList = m_level.Coins;
         }
 
-        public void Update(float totalElapsedSeconds, ISoundObserver soundObserver)
+        public void Update(float totalElapsedSeconds, ISoundObserver soundObserver, IPickUpObserver pickUpObserver)
         {
             UpdatePlayer(totalElapsedSeconds);
             UpdateBomb(totalElapsedSeconds);
@@ -90,19 +90,20 @@ namespace GameProject.Model
             CheckIfCollideWithBomb(soundObserver);
             CheckIfDead();
             CheckIfLevelFinished(soundObserver);
-            CheckIfPlayerPickedUpCoin(soundObserver);
+            CheckIfPlayerPickedUpCoin(soundObserver, pickUpObserver);
         }
 
         /// <summary>
         /// Check if player have collided with coin
         /// </summary>
         /// <param name="soundObserver"></param>
-        private void CheckIfPlayerPickedUpCoin(ISoundObserver soundObserver)
+        private void CheckIfPlayerPickedUpCoin(ISoundObserver soundObserver, IPickUpObserver pickUpObserver)
         {
             for (int i = 0; i < m_coinList.Count; i++)
             {
                 if (CollisionHandler.IsCollidingWithCoin(m_player, m_coinList[i]))
                 {
+                    pickUpObserver.PlayerPickUpCoinAt(m_coinList[i].Position);
                     m_coinList.Remove(m_coinList[i]);
                     soundObserver.PlayerPickUpCoin();
                 }

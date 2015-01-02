@@ -107,9 +107,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\IPickUpObserver.cs" />
     <Compile Include="Controller\ISoundObserver.cs" />
     <Compile Include="Model\Bomb.cs" />
     <Compile Include="Model\Coin.cs" />
+    <Compile Include="View\CoinParticle.cs" />
+    <Compile Include="View\CoinSplatterSystem.cs" />
     <Compile Include="View\MenuView.cs" />
     <Compile Include="Model\Collider.cs" />
     <Compile Include="Model\CollisionDetails.cs" />

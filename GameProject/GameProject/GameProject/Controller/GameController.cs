@@ -147,7 +147,7 @@ namespace GameProject
                         m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.STAND);
                     }
 
-                    m_gameModel.Update(elapsedTimeSeconds, m_sound);
+                    m_gameModel.Update(elapsedTimeSeconds, m_sound, m_gameView);
 
                     break;
 
@@ -159,6 +159,8 @@ namespace GameProject
                     }
 
                     OptionSelected();
+
+                    m_gameView.ShowCoinSplatter = false;
 
                     m_gameModel.RestartLevel();
 
@@ -173,6 +175,8 @@ namespace GameProject
 
                     OptionSelected();
 
+                    m_gameView.ShowCoinSplatter = false;
+
                     m_gameModel.LoadLevel();
 
                     break;
@@ -185,6 +189,8 @@ namespace GameProject
                     }
 
                     OptionSelected();
+
+                    m_gameView.ShowCoinSplatter = false;
 
                     m_gameModel.ResetLevel();
                     m_gameModel.LoadLevel();
@@ -199,6 +205,7 @@ namespace GameProject
                     }
 
                     OptionSelected();
+
                     break;
             }
 
@@ -220,7 +227,7 @@ namespace GameProject
                         GraphicsDevice.Viewport,
                         new Vector2(Level.LEVEL_WIDTH, Level.LEVEL_HEIGHT));
 
-                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState, m_gameModel.GetBombPositions(), m_gameModel.GetCoinPositions());
+                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState, m_gameModel.GetBombPositions(), m_gameModel.GetCoinPositions(), (float)gameTime.ElapsedGameTime.TotalMilliseconds);
                     break;
 
                 case GameModel.GameState.MAIN_MENU:
