@@ -1,0 +1,170 @@
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+c:\users\tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkLeft.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkRight.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkLeft.png
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\WalkRight.png
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\documents\visual studio 2010\Projects\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Tile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject - kopia\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Instructions.xnb
+C:\Users\Tommy-dator\Desktop\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Instructions.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Bomb.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.mp3
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\Coin.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Bomb.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.mp3
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\Content\Coin.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.exe.manifest
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\bin\x86\Debug\GameProject.application
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.exe.manifest
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProject\obj\x86\Debug\GameProject.application
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Jump.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\EmptyTile.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.spritefont
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Bomb.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.mp3
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Coin.png
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\GameProject.exe.manifest
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\GameProject.application
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.csprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.exe.manifest
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.application
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.exe
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
