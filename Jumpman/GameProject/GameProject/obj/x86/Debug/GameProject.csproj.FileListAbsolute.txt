@@ -168,3 +168,7 @@ C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GamePro
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.application
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.exe
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.wav
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerHealth.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerHealth.png

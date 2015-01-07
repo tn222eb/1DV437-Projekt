@@ -86,7 +86,7 @@ namespace GameProject.Model
             UpdatePlayer(totalElapsedSeconds);
             UpdateBomb(totalElapsedSeconds);
 
-            CheckIfInHole();
+            CheckIfInHole(soundObserver);
             CheckIfCollideWithBomb(soundObserver);
             CheckIfDead();
             CheckIfLevelFinished(soundObserver);
@@ -263,11 +263,12 @@ namespace GameProject.Model
         /// <summary>
         /// Check if player have fallen in hole
         /// </summary>
-        private void CheckIfInHole()
+        private void CheckIfInHole(ISoundObserver soundObserver)
         {
             if (m_level.IsInHole(m_player.Position, m_player.Size))
             {
                 m_player.RemoveLife();
+                soundObserver.PlayerFallInHole();
             }
         }
 

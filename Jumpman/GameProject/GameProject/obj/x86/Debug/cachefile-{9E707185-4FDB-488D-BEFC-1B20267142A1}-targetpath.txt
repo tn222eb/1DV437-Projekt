@@ -12,6 +12,8 @@ Content\SpriteFont.xnb
 Content\SpriteFont2.xnb
 Content\BackgroundSong.xnb
 Content\BackgroundSong.wma
+Content\PlayerFall.xnb
+Content\PlayerHealth.xnb
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
 Content\GroundTile.png
@@ -23,3 +25,5 @@ Content\Bomb.png
 Content\BombExplode.wav
 Content\BackgroundSong.mp3
 Content\Coin.png
+Content\PlayerFall.wav
+Content\PlayerHealth.png

@@ -11,6 +11,8 @@ Content\CoinPickedUp.xnb
 Content\SpriteFont.xnb
 Content\SpriteFont2.xnb
 Content\BackgroundSong.xnb
+Content\PlayerFall.xnb
+Content\PlayerHealth.xnb
 Content\BackgroundSong.wma
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
@@ -23,3 +25,5 @@ Content\Bomb.png
 Content\BombExplode.wav
 Content\BackgroundSong.mp3
 Content\Coin.png
+Content\PlayerFall.wav
+Content\PlayerHealth.png

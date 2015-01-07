@@ -93,14 +93,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="33280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="33792">
       <assemblyIdentity name="GameProject" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BGU3BxDR0Syv5KorPx8CQJ0JifI=</dsig:DigestValue>
+        <dsig:DigestValue>qIRIVYVfI2pPwV7Le4l9Y4t3svY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -255,6 +255,42 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>Tg8qCvBn3TLHS5Wrvxd3YpuV2Rs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\PlayerFall.wav" size="456514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>AxNO55arP3EJwK4pw2v5Obdgir4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\PlayerFall.xnb" size="456485">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>6I7YpMSn+1owEs8mjoay65T/b2U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\PlayerHealth.png" size="19093">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>XSfVyikbCODeVTzzZ9uX3mpAw3A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\PlayerHealth.xnb" size="53915">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>J/vZS53qQ/wfcCRzY3fYUf1Ibxo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\PlayerLeftWalkAnimation.png" size="35207">

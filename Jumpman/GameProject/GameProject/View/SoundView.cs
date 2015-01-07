@@ -16,6 +16,7 @@ namespace GameProject.View
         private SoundEffect m_levelCompleted;
         private SoundEffect m_coinPickedUp;
         private Song m_gameBackgroundSong;
+        private SoundEffect m_playerFall;
 
         public SoundView(ContentManager content)
         {
@@ -24,6 +25,7 @@ namespace GameProject.View
             m_levelCompleted = content.Load<SoundEffect>("LevelCompleted");
             m_coinPickedUp = content.Load<SoundEffect>("CoinPickedUp");
             m_gameBackgroundSong = content.Load<Song>("BackgroundSong");
+            m_playerFall = content.Load<SoundEffect>("PlayerFall");
 
             MediaPlayer.IsRepeating = true;
         }
@@ -82,6 +84,14 @@ namespace GameProject.View
         public void PlayerPickUpCoin() 
         {
             m_coinPickedUp.Play();
+        }
+
+        /// <summary>
+        /// Player falls out of screen
+        /// </summary>
+        public void PlayerFallInHole() 
+        {
+            m_playerFall.Play();
         }
     }
 }
