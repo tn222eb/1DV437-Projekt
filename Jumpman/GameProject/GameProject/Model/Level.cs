@@ -139,7 +139,7 @@ namespace GameProject.Model
 
                     else if (levelString[index] == m_coinChar) 
                     {
-                        m_coinList.Add(new Coin(new Vector2(x + 0.5f, y + 1)));
+                        m_coinList.Add(new Coin(new Vector2(x + 0.5f, y + 1.5f))); 
                         m_tiles[x, y] = Tile.EMPTY;
                     }
 

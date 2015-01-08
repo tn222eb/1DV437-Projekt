@@ -4,7 +4,7 @@ x.c.e.......e.c........................f
 x.xxx.......xxx........................f
 x.....e.c..............................f
 x.....xxx.....e.c......................f
-xs............xxx...........e..........f
-xxxx........................xxx........f
-xxxx..e.c...........ce.c.............xxx
-xxxxhhxxxhhhhhhhhhhhxxxxhhhhhhhhhhhhhxxx
+x..c..........xxx...........e.c........f
+x..xx.......................xxx........f
+xs....e.c..........ce.ce............c..f
+xxhhhhxxxhhhhhhhhhhxxxxxhhhhhhhhhhhxxxxx

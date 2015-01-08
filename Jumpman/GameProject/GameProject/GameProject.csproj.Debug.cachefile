@@ -1,7 +1,5 @@
 Content\PlayerLeftWalkAnimation.xnb
 Content\PlayerRightWalkAnimation.xnb
-Content\GroundTile.xnb
-Content\EmptyTile.xnb
 Content\Bomb.xnb
 Content\Coin.xnb
 Content\Jump.xnb
@@ -12,13 +10,12 @@ Content\SpriteFont.xnb
 Content\SpriteFont2.xnb
 Content\BackgroundSong.xnb
 Content\PlayerFall.xnb
-Content\PlayerHealth.xnb
+Content\GroundTile.xnb
+Content\background.xnb
 Content\BackgroundSong.wma
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
-Content\GroundTile.png
 Content\Jump.wav
-Content\EmptyTile.png
 Content\SpriteFont.spritefont
 Content\SpriteFont2.spritefont
 Content\Bomb.png
@@ -26,4 +23,3 @@ Content\BombExplode.wav
 Content\BackgroundSong.mp3
 Content\Coin.png
 Content\PlayerFall.wav
-Content\PlayerHealth.png

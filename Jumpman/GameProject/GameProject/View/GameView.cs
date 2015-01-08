@@ -28,7 +28,6 @@ namespace GameProject.View
         private Texture2D m_playerTexture;
         private Texture2D m_tileTexture;
         private Texture2D m_groundTexture;
-        private Texture2D m_emptyTexture;
         private Texture2D m_bombTexture;
         private Texture2D m_coinTexture;
 
@@ -36,6 +35,7 @@ namespace GameProject.View
         private bool m_showCoinSplatter = false;
 
         private CoinSplatterSystem m_coinSplatterSystem = new CoinSplatterSystem();
+        private Texture2D m_backgroundTexture;
 
         public enum Movement
         {
@@ -53,9 +53,10 @@ namespace GameProject.View
             this.m_playerLeftWalkTexture = content.Load<Texture2D>("PlayerLeftWalkAnimation");
             this.m_playerRightWalkTexture = content.Load<Texture2D>("PlayerRightWalkAnimation");
             this.m_groundTexture = content.Load<Texture2D>("GroundTile");
-            this.m_emptyTexture = content.Load<Texture2D>("EmptyTile");
             this.m_bombTexture = content.Load<Texture2D>("Bomb");
             this.m_coinTexture = content.Load<Texture2D>("Coin");
+            this.m_backgroundTexture = content.Load<Texture2D>("background");
+            this.m_tileTexture = m_groundTexture;
             this.m_playerTexture = m_playerRightWalkTexture;
         }
 
@@ -121,6 +122,8 @@ namespace GameProject.View
 
             m_spriteBatch.Begin();
 
+            DrawBackground(viewPortSize);
+
             for (int x = 0; x < Level.LEVEL_WIDTH; x++)
             {
                 for (int y = 0; y < Level.LEVEL_HEIGHT; y++)
@@ -154,13 +157,22 @@ namespace GameProject.View
         }
 
         /// <summary>
+        /// Draw background
+        /// </summary>
+        /// <param name="viewPortSize"></param>
+        private void DrawBackground(Vector2 viewPortSize)
+        {
+            m_spriteBatch.Draw(m_backgroundTexture, new Rectangle(0, 0, (int)viewPortSize.X, (int)viewPortSize.Y), Color.White);
+        }
+
+        /// <summary>
         /// Draw coin
         /// </summary>
         /// <param name="coinViewPosition"></param>
         /// <param name="scale"></param>
         private void DrawCoin(Vector2 coinViewPosition, float scale)
         {
-            Rectangle rectangle = new Rectangle((int)(coinViewPosition.X - scale / 2.0), (int)(coinViewPosition.Y - scale), (int)scale, (int)scale);
+            Rectangle rectangle = new Rectangle((int)(coinViewPosition.X - scale / 2.0), (int)(coinViewPosition.Y - scale), (int)scale / 2, (int)scale / 2);
 
             m_spriteBatch.Draw(m_coinTexture, rectangle, Color.White);
         }
@@ -176,17 +188,11 @@ namespace GameProject.View
         {
             if (tile == Level.Tile.BLOCKED)
             {
-                m_tileTexture = m_groundTexture;
+                Rectangle destinationRectangle = new Rectangle((int)x, (int)y, (int)scale, (int)scale);
+
+                m_spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
             }
 
-            else
-            {
-                m_tileTexture = m_emptyTexture;
-            }
-
-            Rectangle destinationRectangle = new Rectangle((int)x, (int)y, (int)scale, (int)scale);
-
-            m_spriteBatch.Draw(m_tileTexture, destinationRectangle, Color.White);
         }
 
         /// <summary>

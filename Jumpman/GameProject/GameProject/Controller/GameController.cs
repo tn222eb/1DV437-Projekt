@@ -162,8 +162,6 @@ namespace GameProject
 
                     m_gameView.ShowCoinSplatter = false;
 
-                    m_gameModel.ResetLevel();
-
                     m_gameModel.RestartLevel();
 
                     break;
@@ -220,7 +218,7 @@ namespace GameProject
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.MediumSlateBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             switch (m_gameModel.GetGameState)
             {
