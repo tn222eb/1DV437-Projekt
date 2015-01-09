@@ -36,6 +36,9 @@ namespace GameProject.View
 
         private CoinSplatterSystem m_coinSplatterSystem = new CoinSplatterSystem();
         private Texture2D m_backgroundTexture;
+        private Texture2D m_levelBackgroundThree;
+        private Texture2D m_levelBackgroundTwo;
+        private Texture2D m_levelBackgroundOne;
 
         public enum Movement
         {
@@ -55,7 +58,10 @@ namespace GameProject.View
             this.m_groundTexture = content.Load<Texture2D>("GroundTile");
             this.m_bombTexture = content.Load<Texture2D>("Bomb");
             this.m_coinTexture = content.Load<Texture2D>("Coin");
-            this.m_backgroundTexture = content.Load<Texture2D>("background");
+            this.m_levelBackgroundThree = content.Load<Texture2D>("background3");
+            this.m_levelBackgroundTwo = content.Load<Texture2D>("background2");
+            this.m_levelBackgroundOne = content.Load<Texture2D>("background1");
+
             this.m_tileTexture = m_groundTexture;
             this.m_playerTexture = m_playerRightWalkTexture;
         }
@@ -106,7 +112,7 @@ namespace GameProject.View
         }
 
         /// <summary>
-        /// Draw player, tiles, bombs, coins and set camera on player
+        /// Draw player, tiles, bombs, coins, coin particle, background and set camera on player
         /// </summary>
         /// <param name="viewport"></param>
         /// <param name="camera"></param>
@@ -122,7 +128,7 @@ namespace GameProject.View
 
             m_spriteBatch.Begin();
 
-            DrawBackground(viewPortSize);
+            DrawBackground(viewPortSize, camera);
 
             for (int x = 0; x < Level.LEVEL_WIDTH; x++)
             {
@@ -160,9 +166,32 @@ namespace GameProject.View
         /// Draw background
         /// </summary>
         /// <param name="viewPortSize"></param>
-        private void DrawBackground(Vector2 viewPortSize)
+        private void DrawBackground(Vector2 viewPortSize, Camera camera)
         {
-            m_spriteBatch.Draw(m_backgroundTexture, new Rectangle(0, 0, (int)viewPortSize.X, (int)viewPortSize.Y), Color.White);
+            WhatBackgroundToShow();
+
+            var sourceRectangle = new Rectangle(0,0 , m_backgroundTexture.Width, m_backgroundTexture.Height);
+            var destionationRectangle = camera.GetViewPosition(0,0, viewPortSize);
+
+            m_spriteBatch.Draw(m_backgroundTexture, destionationRectangle, sourceRectangle, Color.White);
+        }
+
+        private void WhatBackgroundToShow()
+        {
+            if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.ONE)
+            {
+                m_backgroundTexture = m_levelBackgroundOne;
+            }
+
+            else if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.TWO)
+            {
+                m_backgroundTexture = m_levelBackgroundTwo;
+            }
+
+            else if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.THREE)
+            {
+                m_backgroundTexture = m_levelBackgroundThree;
+            }
         }
 
         /// <summary>
@@ -249,6 +278,10 @@ namespace GameProject.View
             return Keyboard.GetState().IsKeyDown(Keys.Enter) && selected == 1;
         }
 
+        /// <summary>
+        /// Saves position player picks up coin and sets to show coin particles
+        /// </summary>
+        /// <param name="coinPosition"></param>
         public void PlayerPickUpCoinAt(Vector2 coinPosition)
         {
             m_showCoinSplatter = true;

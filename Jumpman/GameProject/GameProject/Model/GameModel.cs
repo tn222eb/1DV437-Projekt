@@ -83,7 +83,17 @@ namespace GameProject.Model
 
         public void Update(float totalElapsedSeconds, ISoundObserver soundObserver, IPickUpObserver pickUpObserver)
         {
-            UpdatePlayer(totalElapsedSeconds);
+            if (CanPlayerMoveRight())
+            {
+                UpdatePlayer(totalElapsedSeconds);
+            }
+
+            else 
+            {
+                MoveLeft();
+                UpdatePlayer(totalElapsedSeconds);
+            }
+
             UpdateBomb(totalElapsedSeconds);
 
             CheckIfInHole(soundObserver);
@@ -298,9 +308,9 @@ namespace GameProject.Model
         {
             List<Vector2> bombPositions = new List<Vector2>();
 
-            foreach (Bomb bomb in m_bombsList)
+            for (int i = 0; i < m_bombsList.Count; i++) 
             {
-                bombPositions.Add(bomb.Position);
+                bombPositions.Add(m_bombsList[i].Position);
             }
 
             return bombPositions;
@@ -314,9 +324,9 @@ namespace GameProject.Model
         {
             List<Vector2> coinPositions = new List<Vector2>();
 
-            foreach(Coin coin in m_coinList)
+            for (int i = 0; i < m_coinList.Count; i++)
             {
-                coinPositions.Add(coin.Position);
+                coinPositions.Add(m_coinList[i].Position);
             }
 
             return coinPositions;

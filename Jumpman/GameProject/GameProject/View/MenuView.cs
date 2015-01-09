@@ -107,7 +107,7 @@ namespace GameProject
             {
                 if (i == m_optionSelected)
                 {
-                    color = Color.Yellow;
+                    color = Color.DarkOrange;
                 }
 
                 else

@@ -93,24 +93,42 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="33792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="34304">
       <assemblyIdentity name="GameProject" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>865xyYYb+Ns+yNPYTcpoxcFkjJE=</dsig:DigestValue>
+        <dsig:DigestValue>VfMHxS6WCk4DOZPGaPBbwzXw3Uk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Content\background.xnb" size="3145915">
+  <file name="Content\background1.xnb" size="11210455">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>VVBo/vpEnKcA5yrTAGSV6/nEgt0=</dsig:DigestValue>
+      <dsig:DigestValue>DA5hHeCQFFUQS1NiGmVeyCPtR50=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\background2.xnb" size="15824175">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>UDGfhtFapwP6PE5Qy8gA2cACiXw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\background3.xnb" size="12302155">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>eDAYbZMmD4dwNL8gJXEI0icZEkk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\BackgroundSong.mp3" size="1098429">
@@ -128,7 +146,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>RCPMUL2VcVHmtEv5jxTVEilU3SE=</dsig:DigestValue>
+      <dsig:DigestValue>TvyB5Lj7GScBQe21IzML9SacMTk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\BackgroundSong.xnb" size="132">
@@ -138,6 +156,42 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
       <dsig:DigestValue>U/QnMnLKWcxxkbo6WvhYAJgLTUw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\BackgroundSong2.wma" size="568697">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>q+c90juSpF3ZFwO9EBdfyycXPSQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\BackgroundSong2.xnb" size="133">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>VeO0xMVDoO/3zSaWNFWodK9YPtY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\BackgroundSong3.wma" size="837137">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>R/K9Ww3AIKMRQot2vvtyAh4ML64=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Content\BackgroundSong3.xnb" size="133">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>u/xitWyV2doD8p0zAo/op7IeW7k=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Bomb.png" size="16935">

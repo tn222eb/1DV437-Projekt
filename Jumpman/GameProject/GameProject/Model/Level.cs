@@ -9,7 +9,7 @@ namespace GameProject.Model
 {
     class Level
     {
-        public const int LEVEL_WIDTH = 40;
+        public const int LEVEL_WIDTH = 49;
         public const int LEVEL_HEIGHT = 10;
 
         public Tile[,] m_tiles;
@@ -72,7 +72,7 @@ namespace GameProject.Model
         {
             m_tiles = new Tile[LEVEL_WIDTH, LEVEL_HEIGHT];
 
-            m_currentLevel = Levels.ONE;
+            m_currentLevel = Levels.THREE;
             LoadLevel();
         }
 
@@ -231,6 +231,7 @@ namespace GameProject.Model
 
         public bool IsBombStandingByEdgeOfBlocked(Vector2 position)
         {
+
             if ((m_tiles[(int)position.X, (int)position.Y] == Tile.HOLE) || m_tiles[(int)position.X, (int)position.Y] == Tile.EMPTY)
             {
                 return true;

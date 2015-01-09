@@ -63,7 +63,7 @@ namespace GameProject
             // TODO: use this.Content to load your game content here
             m_gameModel = new GameModel();
             m_gameView = new GameView(spriteBatch, m_gameModel, Content);
-            m_sound = new SoundView(Content);
+            m_sound = new SoundView(Content, m_gameModel);
             m_menuView = new MenuView(spriteBatch, graphics, m_gameModel);
             m_menuView.LoadContent(Content);
         }
@@ -117,15 +117,6 @@ namespace GameProject
                         m_gameModel.SetGameState = GameModel.GameState.PAUSE;
                     }
 
-                    if (playerJump)
-                    {
-                        if (m_gameModel.CanPlayerJump())
-                        {
-                            m_gameModel.Jump();
-                            m_sound.PlayerJump();
-                        }
-                    }
-
                     if (playerGoesRight)
                     {
                         if (m_gameModel.CanPlayerMoveRight())
@@ -145,6 +136,15 @@ namespace GameProject
                     {
                         m_gameModel.StandStill();
                         m_gameView.AnimateMovement(elapsedTimeMilliSeconds, GameView.Movement.STAND);
+                    }
+
+                    if (playerJump)
+                    {
+                        if (m_gameModel.CanPlayerJump())
+                        {
+                            m_gameModel.Jump();
+                            m_sound.PlayerJump();
+                        }
                     }
 
                     m_gameModel.Update(elapsedTimeSeconds, m_sound, m_gameView);

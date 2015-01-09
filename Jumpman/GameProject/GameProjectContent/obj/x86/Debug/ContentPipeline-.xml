@@ -120,13 +120,51 @@
       <Time>2015-01-08T03:06:56.3653162+01:00</Time>
     </Item>
     <Item>
-      <Source>background.jpg</Source>
-      <Name>background</Name>
+      <Source>background2.jpg</Source>
+      <Name>background2</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2015-01-08T09:15:42.0531124+01:00</Time>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background2.xnb</Output>
+      <Time>2015-01-08T15:21:57.3936339+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background3.png</Source>
+      <Name>background3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background3.xnb</Output>
+      <Time>2015-01-08T15:15:05.0651207+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background1.png</Source>
+      <Name>background1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background1.xnb</Output>
+      <Time>2015-01-08T15:36:13.2826083+01:00</Time>
+    </Item>
+    <Item>
+      <Source>BackgroundSong2.mp3</Source>
+      <Name>BackgroundSong2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.xnb</Output>
+      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.wma</Extra>
+      <Time>2015-01-08T15:39:29.4071202+01:00</Time>
+    </Item>
+    <Item>
+      <Source>BackgroundSong3.mp3</Source>
+      <Name>BackgroundSong3</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.xnb</Output>
+      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.wma</Extra>
+      <Time>2015-01-08T15:46:44.7744299+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

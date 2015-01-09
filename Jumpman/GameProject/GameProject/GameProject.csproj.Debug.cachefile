@@ -11,8 +11,14 @@ Content\SpriteFont2.xnb
 Content\BackgroundSong.xnb
 Content\PlayerFall.xnb
 Content\GroundTile.xnb
-Content\background.xnb
+Content\background2.xnb
+Content\background3.xnb
+Content\background1.xnb
+Content\BackgroundSong2.xnb
+Content\BackgroundSong3.xnb
 Content\BackgroundSong.wma
+Content\BackgroundSong2.wma
+Content\BackgroundSong3.wma
 Content\PlayerLeftWalkAnimation.png
 Content\PlayerRightWalkAnimation.png
 Content\Jump.wav

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
 using GameProject.Controller;
 using Microsoft.Xna.Framework.Media;
+using GameProject.Model;
 
 namespace GameProject.View
 {
@@ -17,14 +18,21 @@ namespace GameProject.View
         private SoundEffect m_coinPickedUp;
         private Song m_gameBackgroundSong;
         private SoundEffect m_playerFall;
+        private Song m_gameBackgroundSong1;
+        private Song m_gameBackgroundSong2;
+        private Song m_gameBackgroundSong3;
+        private GameModel m_gameModel;
 
-        public SoundView(ContentManager content)
+        public SoundView(ContentManager content, GameModel gameModel)
         {
+            m_gameModel = gameModel;
             m_playerJump = content.Load<SoundEffect>("Jump");
             m_bombExplode = content.Load<SoundEffect>("BombExplode");
             m_levelCompleted = content.Load<SoundEffect>("LevelCompleted");
             m_coinPickedUp = content.Load<SoundEffect>("CoinPickedUp");
-            m_gameBackgroundSong = content.Load<Song>("BackgroundSong");
+            m_gameBackgroundSong1 = content.Load<Song>("BackgroundSong");
+            m_gameBackgroundSong2 = content.Load<Song>("BackgroundSong2");
+            m_gameBackgroundSong3 = content.Load<Song>("BackgroundSong3");
             m_playerFall = content.Load<SoundEffect>("PlayerFall");
 
             MediaPlayer.IsRepeating = true;
@@ -41,8 +49,28 @@ namespace GameProject.View
         /// </summary>
         public void StartGameBackgroundSong() 
         {
+            WhatSongToPlay();
+
             MediaPlayer.Play(m_gameBackgroundSong);
             BackGroundSongPlaying = true;
+        }
+
+        private void WhatSongToPlay()
+        {
+            if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.ONE)
+            {
+                m_gameBackgroundSong = m_gameBackgroundSong1;
+            }
+
+            else if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.TWO)
+            {
+                m_gameBackgroundSong = m_gameBackgroundSong2;
+            }
+
+            else if (m_gameModel.GetLevel.CurrentLevel == Level.Levels.THREE)
+            {
+                m_gameBackgroundSong = m_gameBackgroundSong3;
+            }
         }
 
         /// <summary>

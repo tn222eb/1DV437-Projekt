@@ -167,4 +167,10 @@ C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GamePro
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\obj\x86\Debug\GameProject.pdb
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.xnb
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.wav
-C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background3.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background1.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.xnb
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.wma
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.wma

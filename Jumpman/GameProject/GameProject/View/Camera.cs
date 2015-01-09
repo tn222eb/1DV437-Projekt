@@ -12,7 +12,7 @@ namespace GameProject.View
     {
         private Vector2 m_modelCenterPosition = new Vector2(0,0);
 
-        private float m_scale = 65f;
+        private float m_scale = 60f;
 
         public float GetScale()
         {
