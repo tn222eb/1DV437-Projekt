@@ -128,7 +128,7 @@ namespace GameProject
         /// </summary>
         public void DrawMenu()
         {
-            string text = "Jumpman";
+            string text = "Mustache Jump";
             string instructions = "Space to jump, move left and right with arrow";
 
             DrawText(text, Color.White, 8, m_biggerFont);
