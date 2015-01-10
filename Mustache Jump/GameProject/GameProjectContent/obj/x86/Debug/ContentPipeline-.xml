@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerLeftWalkAnimation.xnb</Output>
       <Time>2014-12-21T02:08:01.2632174+01:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerRightWalkAnimation.xnb</Output>
       <Time>2014-12-21T02:07:40.029284+01:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\Bomb.xnb</Output>
       <Time>2014-12-29T03:46:47.7654467+01:00</Time>
     </Item>
     <Item>
@@ -34,8 +34,44 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\Coin.xnb</Output>
       <Time>2014-12-30T23:02:22.0106142+01:00</Time>
+    </Item>
+    <Item>
+      <Source>GroundTile.jpg</Source>
+      <Name>GroundTile</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb</Output>
+      <Time>2015-01-08T03:06:56.3653162+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background3.png</Source>
+      <Name>background3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\background3.xnb</Output>
+      <Time>2015-01-08T15:15:05.0651207+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background2.jpg</Source>
+      <Name>background2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\background2.xnb</Output>
+      <Time>2015-01-08T15:21:57.3936339+01:00</Time>
+    </Item>
+    <Item>
+      <Source>background1.png</Source>
+      <Name>background1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\background1.xnb</Output>
+      <Time>2015-01-08T15:36:13.2826083+01:00</Time>
     </Item>
     <Item>
       <Source>Jump.wav</Source>
@@ -43,7 +79,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\Jump.xnb</Output>
       <Time>2014-12-17T00:58:26.4558371+01:00</Time>
     </Item>
     <Item>
@@ -52,7 +88,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BombExplode.xnb</Output>
       <Time>2014-12-29T04:13:32.8537989+01:00</Time>
     </Item>
     <Item>
@@ -61,7 +97,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\LevelCompleted.xnb</Output>
       <Time>2014-12-29T20:32:15.0787715+01:00</Time>
     </Item>
     <Item>
@@ -70,8 +106,17 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\CoinPickedUp.xnb</Output>
       <Time>2014-12-31T01:03:10.0948729+01:00</Time>
+    </Item>
+    <Item>
+      <Source>PlayerFall.wav</Source>
+      <Name>PlayerFall</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.xnb</Output>
+      <Time>2015-01-07T15:00:25.3991176+01:00</Time>
     </Item>
     <Item>
       <Source>SpriteFont.spritefont</Source>
@@ -79,7 +124,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont.xnb</Output>
       <Time>2014-12-23T18:56:38.5089238+01:00</Time>
     </Item>
     <Item>
@@ -88,7 +133,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\SpriteFont2.xnb</Output>
       <Time>2014-12-27T00:18:24.3092318+01:00</Time>
     </Item>
     <Item>
@@ -97,54 +142,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb</Output>
-      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma</Extra>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.xnb</Output>
+      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong.wma</Extra>
       <Time>2015-01-08T09:18:20.059937+01:00</Time>
-    </Item>
-    <Item>
-      <Source>PlayerFall.wav</Source>
-      <Name>PlayerFall</Name>
-      <Importer>WavImporter</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\PlayerFall.xnb</Output>
-      <Time>2015-01-07T15:00:25.3991176+01:00</Time>
-    </Item>
-    <Item>
-      <Source>GroundTile.jpg</Source>
-      <Name>GroundTile</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\GroundTile.xnb</Output>
-      <Time>2015-01-08T03:06:56.3653162+01:00</Time>
-    </Item>
-    <Item>
-      <Source>background2.jpg</Source>
-      <Name>background2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background2.xnb</Output>
-      <Time>2015-01-08T15:21:57.3936339+01:00</Time>
-    </Item>
-    <Item>
-      <Source>background3.png</Source>
-      <Name>background3</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background3.xnb</Output>
-      <Time>2015-01-08T15:15:05.0651207+01:00</Time>
-    </Item>
-    <Item>
-      <Source>background1.png</Source>
-      <Name>background1</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\background1.xnb</Output>
-      <Time>2015-01-08T15:36:13.2826083+01:00</Time>
     </Item>
     <Item>
       <Source>BackgroundSong2.mp3</Source>
@@ -152,8 +152,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.xnb</Output>
-      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.wma</Extra>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.xnb</Output>
+      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong2.wma</Extra>
       <Time>2015-01-08T15:39:29.4071202+01:00</Time>
     </Item>
     <Item>
@@ -162,8 +162,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.xnb</Output>
-      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.wma</Extra>
+      <Output>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.xnb</Output>
+      <Extra>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\BackgroundSong3.wma</Extra>
       <Time>2015-01-08T15:46:44.7744299+01:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -173,10 +173,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProjectContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProjectContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProject\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProjectContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProjectContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProject\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

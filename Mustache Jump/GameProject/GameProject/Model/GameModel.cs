@@ -34,6 +34,8 @@ namespace GameProject.Model
 
         GameState m_gameState = GameState.MAIN_MENU;
 
+
+        private int attemptsCounter = 0;
         bool m_hasCollidedWithGround = false;
 
         public GameModel()
@@ -255,6 +257,7 @@ namespace GameProject.Model
             if (m_player.GetRemainingLives() <= 0)
             {
                 m_gameState = GameState.GAME_OVER;
+                attemptsCounter++;
             }
         }
 
@@ -295,9 +298,17 @@ namespace GameProject.Model
         /// <summary>
         /// Reset current level back to level 1
         /// </summary>
-        internal void ResetLevel()
+        public void ResetLevel()
         {
             m_level.CurrentLevel = Level.Levels.ONE;
+        }
+
+        /// <summary>
+        /// Resets attempt counter
+        /// </summary>
+        public void ResetAttemptsCounter() 
+        {
+            attemptsCounter = 0;
         }
 
         /// <summary>
@@ -340,5 +351,13 @@ namespace GameProject.Model
         {
             return m_level.CurrentLevel;
         } 
+
+        /// <summary>
+        /// Get how many attempts
+        /// </summary>
+        public int GetAttempts 
+        {
+            get { return attemptsCounter; }
+        }
     }
 }

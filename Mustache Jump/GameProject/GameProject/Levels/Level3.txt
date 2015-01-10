@@ -6,5 +6,5 @@ x.....e.c.......................................f
 x.....xxx.....e.c...............................f
 x..c..........xxx...........e.c.................f
 x..xx.......................xxx....e.c..........f
-xs....e.c...........ce.ec..........xxx....xxxxxxx
-xxhhhhxxxhhhhhhhhhhhxxxxxhhhhhhhhhhxxxhhhhxxxxxxx
+xs....e.c...........ce.ec..........xxx..........f
+xxhhhhxxxhhhhhhhhhhhxxxxxhhhhhhhhhhxxxhhhhhhxxxxx

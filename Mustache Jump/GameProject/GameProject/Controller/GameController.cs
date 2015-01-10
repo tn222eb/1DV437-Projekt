@@ -190,10 +190,15 @@ namespace GameProject
 
                     OptionSelected();
 
-                    m_gameView.ShowCoinSplatter = false;
+                    // Player chooses to play again so reset level and attempts counter
+                    if (m_gameModel.GetGameState == GameModel.GameState.PLAY) 
+                    {
+                        m_gameModel.ResetAttemptsCounter();
+                        m_gameModel.ResetLevel();
+                        m_gameModel.LoadLevel();
+                    }
 
-                    m_gameModel.ResetLevel();
-                    m_gameModel.LoadLevel();
+                    m_gameView.ShowCoinSplatter = false;
 
                     break;
 
@@ -227,7 +232,7 @@ namespace GameProject
                         GraphicsDevice.Viewport,
                         new Vector2(Level.LEVEL_WIDTH, Level.LEVEL_HEIGHT));
 
-                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState, m_gameModel.GetBombPositions(), m_gameModel.GetCoinPositions(), (float)gameTime.ElapsedGameTime.TotalMilliseconds);
+                    m_gameView.DrawGame(GraphicsDevice.Viewport, m_camera, m_gameModel.GetLevel, m_gameModel.GetPlayer.Position, m_gameModel.GetGameState, m_gameModel.GetBombPositions(), m_gameModel.GetCoinPositions(), (float)gameTime.ElapsedGameTime.TotalMilliseconds, m_gameModel.GetAttempts);
                     break;
 
                 case GameModel.GameState.MAIN_MENU:

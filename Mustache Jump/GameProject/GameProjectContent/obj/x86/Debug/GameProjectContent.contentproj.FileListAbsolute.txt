@@ -5,3 +5,4 @@ C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\GameProject\GameProject\Gam
 C:\Users\Tommy-dator\Desktop\Frank Jump\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Frank Jump\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
 C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Jumpman\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache
+C:\Users\Tommy-dator\Documents\GitHub\1DV437-Projekt\Mustache Jump\GameProject\GameProjectContent\obj\x86\Debug\GameProjectContent.contentprojResolveAssemblyReference.cache

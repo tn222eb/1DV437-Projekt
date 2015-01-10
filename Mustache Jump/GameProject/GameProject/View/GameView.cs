@@ -121,7 +121,7 @@ namespace GameProject.View
         /// <param name="gameState"></param>
         /// <param name="bombPositions"></param>
         /// <param name="coinPositions"></param>
-        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions, float elapsedTime)
+        public void DrawGame(Viewport viewport, Camera camera, Level level, Vector2 playerPosition, GameProject.Model.GameModel.GameState gameState, List<Vector2> bombPositions, List<Vector2> coinPositions, float elapsedTime, int attempts)
         {
             Vector2 viewPortSize = new Vector2(viewport.Width, viewport.Height);
             float scale = camera.GetScale();
@@ -158,6 +158,8 @@ namespace GameProject.View
 
             Vector2 playerViewPosition = camera.GetViewPosition(playerPosition.X, playerPosition.Y, viewPortSize);
             DrawPlayer(playerViewPosition, scale);
+
+            DrawAttempts(attempts);
 
             m_spriteBatch.End();
         }
@@ -294,6 +296,12 @@ namespace GameProject.View
         {
             get { return m_showCoinSplatter; }
             set { m_showCoinSplatter = value; }
+        }
+
+        private void DrawAttempts(int attempts)
+        {
+            string text = "Attempts: " + attempts.ToString();
+            m_spriteBatch.DrawString(MenuView.m_font, text, new Vector2(5, 5), Color.White);
         }
     }
 }

@@ -93,14 +93,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="34304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameProject.exe" size="35328">
       <assemblyIdentity name="GameProject" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>/HYl+H/JfYNoQMFtvLvlU85Ed0c=</dsig:DigestValue>
+        <dsig:DigestValue>IEFj957mfAW9E0e8y5MfGr71cLs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -146,7 +146,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>TvyB5Lj7GScBQe21IzML9SacMTk=</dsig:DigestValue>
+      <dsig:DigestValue>7ZQLKy4sEuUesMmhiSzM8gA+yxA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\BackgroundSong.xnb" size="132">
@@ -164,7 +164,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>q+c90juSpF3ZFwO9EBdfyycXPSQ=</dsig:DigestValue>
+      <dsig:DigestValue>qHk+EjC7cKKBlLpKZs6VBO6DbHU=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\BackgroundSong2.xnb" size="133">
@@ -182,7 +182,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>R/K9Ww3AIKMRQot2vvtyAh4ML64=</dsig:DigestValue>
+      <dsig:DigestValue>2a4Ly1OUHXXkOH0f8s69GfoDGwo=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\BackgroundSong3.xnb" size="133">

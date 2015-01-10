@@ -23,7 +23,7 @@ namespace GameProject
         List<string> m_pauseOptionList = new List<string>();
         List<string> m_gameOverOptionList = new List<string>();
 
-        private SpriteFont m_font;
+        public static SpriteFont m_font;
         private GraphicsDeviceManager m_graphics;
         private SpriteBatch m_spriteBatch;
 
@@ -207,7 +207,22 @@ namespace GameProject
         internal void DrawGameWon()
         {
             string levelPassedText = "Level 3 completed!";
-            string wonGameText = "Congratulations you have finished the game!";
+            string wonGameText = "";
+
+            if (m_gameModel.GetAttempts < 4)
+            {
+                wonGameText = "Congratulations you have finished the game! Great job!";
+            }
+
+            else if (m_gameModel.GetAttempts < 20 && m_gameModel.GetAttempts >= 4)
+            {
+                wonGameText = "Congratulations you have finished the game! Good job!";
+            }
+
+            else if (m_gameModel.GetAttempts >= 20) 
+            {
+                wonGameText = "Congratulations you have finished the game! Finally!";
+            }
 
             DrawText(levelPassedText, Color.White, 8, m_font);
             DrawText(wonGameText, Color.White, 4, m_font);
